@@ -5,7 +5,8 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [BookMarkIdEntity::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 abstract class BookMarkDataBase : RoomDatabase(){
     abstract val dao : BookMarkDao
