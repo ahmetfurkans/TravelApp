@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun observeLiveData() {
-        viewModel.allTravelList.observe(this) {
+        viewModel.flights.observe(this) {
 
-            this.viewModel.allTravelList.value?.let { it ->
+            this.viewModel.flights.value?.let { it ->
                 it.forEach(){
                     println(it.category)
                 }

@@ -54,6 +54,9 @@ class HomeViewModel @Inject constructor(
                     _error.value = false
                     result.data?.let { data ->
                         _allTravelList.value = data
+                        _hotels.value = data.filter { it.category == "hotel" }
+                        _flights.value = data.filter { it.category == "flight" }
+                        _transportation.value = data.filter { it.category == "transportation" }
                     }
                 }
             }
