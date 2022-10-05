@@ -73,5 +73,4 @@ dependencies {
 
     implementation 'androidx.activity:activity-ktx:1.5.0'
 
-
 }
