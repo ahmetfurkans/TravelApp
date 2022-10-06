@@ -4,11 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.empedocles.travelapp.presentation.home.HomeViewModel
+import com.empedocles.travelapp.presentation.search.SearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    private val viewModel by viewModels<HomeViewModel>()
+    private val viewModel by viewModels<SearchViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,12 +19,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun observeLiveData() {
-        viewModel.flights.observe(this) {
-
-            this.viewModel.flights.value?.let { it ->
-                it.forEach(){
-                    println(it.category)
+        viewModel.pageState.observe(this) {
+            this.viewModel.pageState.value?.let { state ->
+                if (state.isLoading){
+                    println("loading")
                 }
+                if (state.isError){
+                    println("there is a error")
+                }
+                if(state.allTravelItem.isNotEmpty()){
+                    state.allTravelItem.forEach{ item ->
+                        println(item.category)
+                    }
+                }
+
             }
         }
     }
