@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.detail.DetailFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <variable
+            name="travelModel"
+            type="com.empedocles.travelapp.domain.model.TravelModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Detail" />
+        tools:context=".presentation.detail.DetailFragment">
 
-</FrameLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/detail_fragment_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:contentDescription="@{travelModel.city}"
+            android:scaleType="centerCrop"
+            android:shadowColor="#C4C4C4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.detail" />
+
+
+        <TextView
+            android:id="@+id/fragment_detail_h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:fontFamily="@font/montserrat"
+            android:text="@{travelModel.title}"
+            android:textColor="#0A2753"
+            android:textSize="@dimen/_24sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_fragment_banner" />
+
+        <ImageView
+            android:id="@+id/detail_fragment_pin_icon"
+            android:layout_width="@dimen/_6sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@drawable/ic_pin"
+            app:layout_constraintStart_toStartOf="@id/fragment_detail_h1"
+            app:layout_constraintTop_toBottomOf="@id/fragment_detail_h1" />
+
+        <TextView
+            android:id="@+id/fragment_detail_h2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat"
+            android:text="@{travelModel.city}"
+            android:textColor="#39414B"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toEndOf="@id/detail_fragment_pin_icon"
+            app:layout_constraintTop_toBottomOf="@id/fragment_detail_h1" />
+
+        <TextView
+            android:id="@+id/fragment_detail_h3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:text="@{travelModel.description}"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_detail_h2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

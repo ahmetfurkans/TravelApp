@@ -5,6 +5,8 @@
     android:id="@+id/main_navigation"
     app:startDestination="@id/homeFragment">
 
+    <action android:id="@+id/action_global_detailFragment"
+        app:destination="@id/detailFragment"/>
 
     <fragment
         android:id="@+id/homeFragment"
@@ -30,5 +32,9 @@
         android:id="@+id/detailFragment"
         android:name="com.empedocles.travelapp.presentation.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
 </navigation>

@@ -20,11 +20,7 @@ class DetailViewModel @Inject constructor(
     private val _pageState = MutableLiveData<DetailState>(DetailState())
     val pageState: LiveData<DetailState> = _pageState
 
-    init {
-        loadSelectedItem("2")
-    }
-
-    private fun loadSelectedItem(id: String) {
+    fun loadSelectedItem(id: String) {
         viewModelScope.launch {
             when (val result = singleTravelItemUseCase.invoke(id)) {
                 is Resource.Error -> {

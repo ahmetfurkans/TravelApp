@@ -59,7 +59,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun createViewPager() {
-        val tabTexts = arrayListOf<String>("All", "Flights", "Hotels", "Transportations")
+        val tabTexts = arrayListOf<String>("All", "Hotels", "Flights", "Transportations")
         var viewPager = binding.viewPager
         val tabLayout = binding.tabLayout
 
@@ -92,8 +92,6 @@ class HomeFragment : Fragment() {
                             state.transportation
                         )
                     )
-                    println(state.allTravelItem?.get(1)?.description)
-
                 }
             }
         }

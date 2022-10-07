@@ -25,7 +25,7 @@
             app:labelVisibilityMode="unlabeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:itemIconSize="@dimen/_22sdp"
+            app:itemIconSize="@dimen/_18sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottom_navigation" />
 

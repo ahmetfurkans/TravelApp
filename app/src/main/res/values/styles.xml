@@ -19,4 +19,8 @@
         <item name="cornerSize">@dimen/_4sdp</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.App.detail" parent="">
+        <item name="cornerSizeBottomRight">@dimen/_27sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_27sdp</item>
+    </style>
 </resources>
