@@ -83,7 +83,7 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_13sdp"
                 android:layout_marginTop="@dimen/_13sdp" />
 
 

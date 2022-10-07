@@ -13,6 +13,7 @@ import com.empedocles.travelapp.databinding.FragmentHomeBinding
 import com.empedocles.travelapp.presentation.home.HomeViewModel
 import com.empedocles.travelapp.util.circularProgressFactory
 import com.empedocles.travelapp.util.downloadFromUrl
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.qualifiers.ActivityContext
 

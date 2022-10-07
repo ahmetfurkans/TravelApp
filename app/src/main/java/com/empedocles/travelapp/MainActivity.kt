@@ -2,8 +2,11 @@ package com.empedocles.travelapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.empedocles.travelapp.databinding.ActivityMainBinding
@@ -16,16 +19,22 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val viewModel by viewModels<DetailViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.apply {
-            val navHostFragment  = supportFragmentManager
+            val navHostFragment = supportFragmentManager
                 .findFragmentById(fragmentContainerView.id) as NavHostFragment
-            NavigationUI.setupWithNavController(binding.bottomNav ,navHostFragment.navController)
+            navHostFragment.navController.addOnDestinationChangedListener { _, destination, _ ->
+                if (destination.id == R.id.detailFragment) {
+                    binding.bottomNav.visibility = View.GONE
+                } else {
+                    binding.bottomNav.visibility = View.VISIBLE
+                }
+            }
+            NavigationUI.setupWithNavController(binding.bottomNav, navHostFragment.navController)
         }
     }
 }
