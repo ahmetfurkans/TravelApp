@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="fragment_home_h1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="fragment_home_tablayout_text" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="fontFamily">@font/source_sans_pro_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.home_item" parent="">
+        <item name="cornerSize">@dimen/_4sdp</item>
+    </style>
+
+</resources>

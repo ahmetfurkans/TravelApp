@@ -11,5 +11,6 @@
     <color name="customSecondary">#FFFF4760</color>
     <color name="customPrimary">#FFC2C5D6</color>
     <color name="customWhite">#FFFCFCFD</color>
+    <color name="customBlackText">#181A25</color>
 
 </resources>

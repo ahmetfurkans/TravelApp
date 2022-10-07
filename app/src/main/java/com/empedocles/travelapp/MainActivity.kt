@@ -27,27 +27,5 @@ class MainActivity : AppCompatActivity() {
                 .findFragmentById(fragmentContainerView.id) as NavHostFragment
             NavigationUI.setupWithNavController(binding.bottomNav ,navHostFragment.navController)
         }
-
-        observeLiveData()
-    }
-
-    fun observeLiveData() {
-        viewModel.pageState.observe(this) {
-            this.viewModel.pageState.value?.let { state ->
-                if (state.isLoading){
-                    println("loading")
-                }
-                if (state.isError){
-                    println("there is a error")
-                }
-                if (state.selectedItem != null){
-                    println("not null")
-                    println(state.selectedItem?.description)
-                }else{
-                    println("null")
-
-                }
-            }
-        }
     }
 }
