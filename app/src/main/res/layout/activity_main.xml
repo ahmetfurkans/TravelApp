@@ -15,7 +15,7 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNav"
-            android:layout_width="@dimen/_219sdp"
+            android:layout_width="@dimen/_239sdp"
             android:layout_height="@dimen/_38sdp"
             android:layout_marginBottom="@dimen/_13sdp"
             android:background="@drawable/bottom_navigation_background_shape"
@@ -25,6 +25,7 @@
             app:labelVisibilityMode="unlabeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:itemIconSize="@dimen/_22sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottom_navigation" />
 
