@@ -35,7 +35,7 @@ class ViewPagerAdapter (private val travelCategoryList: ArrayList<List<TravelMod
     }
 
 
-    fun updateEstateList(newEstateList: List<List<TravelModel>>){
+    fun updateList(newEstateList: List<List<TravelModel>>){
         travelCategoryList.clear()
         travelCategoryList.addAll(newEstateList)
         notifyDataSetChanged()

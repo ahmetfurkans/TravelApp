@@ -84,7 +84,7 @@ class HomeFragment : Fragment() {
                     println("null")
                 } else {
                     println("not null")
-                    adapter.updateEstateList(
+                    adapter.updateList(
                         listOf(
                             state.allTravelItem,
                             state.hotels,

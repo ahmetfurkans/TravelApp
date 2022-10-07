@@ -45,9 +45,10 @@
             app:layout_constraintTop_toBottomOf="@+id/search_fragment_search" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
+            android:id="@+id/top_destination_recycler"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/_150sdp"
+            android:orientation="horizontal"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_9sdp"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,12 +63,13 @@
             android:text="NEARBY ATTRACTION"
             android:textColor="#292C3D"
             android:textSize="@dimen/_13ssp"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView"
-            app:layout_constraintTop_toBottomOf="@id/recyclerView" />
+            app:layout_constraintStart_toStartOf="@+id/top_destination_recycler"
+            app:layout_constraintTop_toBottomOf="@id/top_destination_recycler" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nearby_recycler"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_195sdp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_10sdp"
