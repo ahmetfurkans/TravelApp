@@ -4,5 +4,6 @@
         <item>@font/montserrat</item>
         <item>@font/source_sans_pro</item>
         <item>@font/source_sans_pro_bold</item>
+        <item>@font/source_sans_pro_semibold</item>
     </array>
 </resources>

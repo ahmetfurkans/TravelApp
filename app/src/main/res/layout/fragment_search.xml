@@ -14,33 +14,26 @@
 
         <TextView
             android:id="@+id/search_fragment_h1"
+            style="@style/fragment_tab_text"
             android:text="Search"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            style="@style/fragment_tab_text" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/search_fragment_search"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/_40sdp"
-                android:hint="Where next?"
-                android:layout_marginTop="@dimen/_18sdp"
-                android:layout_marginHorizontal="@dimen/_11sdp"
-                android:drawableEnd="@drawable/ic_search"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/search_fragment_h1" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_fragment_search"
+            style="@style/search_input"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:hint="Where next?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_fragment_h1" />
 
         <TextView
             android:id="@+id/search_fragment_h2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/source_sans_pro_bold"
-            android:text="TOP DESTINATION"
+            style="@style/recyclerview_text"
             android:layout_marginTop="@dimen/_12sdp"
-            android:textColor="#292C3D"
-            android:textSize="@dimen/_13ssp"
+            android:text="TOP DESTINATION"
             app:layout_constraintStart_toStartOf="@+id/search_fragment_h1"
             app:layout_constraintTop_toBottomOf="@+id/search_fragment_search" />
 
@@ -48,21 +41,17 @@
             android:id="@+id/top_destination_recycler"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_150sdp"
-            android:orientation="horizontal"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_9sdp"
+            android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_fragment_h2" />
 
         <TextView
             android:id="@+id/search_fragment_h3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/recyclerview_text"
             android:layout_marginTop="@dimen/_18sdp"
-            android:fontFamily="@font/source_sans_pro_bold"
             android:text="NEARBY ATTRACTION"
-            android:textColor="#292C3D"
-            android:textSize="@dimen/_13ssp"
             app:layout_constraintStart_toStartOf="@+id/top_destination_recycler"
             app:layout_constraintTop_toBottomOf="@id/top_destination_recycler" />
 
@@ -70,9 +59,9 @@
             android:id="@+id/nearby_recycler"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_195sdp"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_fragment_h3" />
 

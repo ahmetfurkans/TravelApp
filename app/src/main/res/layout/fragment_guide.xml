@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -13,11 +13,67 @@
         tools:context=".presentation.guide.GuideFragment">
 
         <TextView
-            android:id="@+id/search_fragment_h1"
+            android:id="@+id/guide_fragment_h1"
+            style="@style/fragment_tab_text"
             android:text="Guide"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            style="@style/fragment_tab_text" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/might_need_h2"
+            style="@style/recyclerview_text"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="MIGHT NEED THESE"
+            app:layout_constraintStart_toStartOf="@id/guide_fragment_h1"
+            app:layout_constraintTop_toBottomOf="@+id/guide_fragment_h1" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:text="@string/see_all"
+            android:textColor="@color/customSecondary"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/might_need_h2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/might_need_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_95sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/might_need_h2"
+            app:layout_constraintTop_toBottomOf="@+id/might_need_h2" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/guide_fragment_search"
+            style="@style/search_input"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:hint="Where next?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/might_need_recycler" />
+
+        <TextView
+            android:id="@+id/toppick_need_h2"
+            style="@style/recyclerview_text"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="TOP-PICK ARTICLES"
+            app:layout_constraintStart_toStartOf="@id/guide_fragment_h1"
+            app:layout_constraintTop_toBottomOf="@+id/guide_fragment_search" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toppick_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_210sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/toppick_need_h2"
+            app:layout_constraintTop_toBottomOf="@+id/toppick_need_h2" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

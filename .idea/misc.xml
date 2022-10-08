@@ -22,12 +22,15 @@
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/ic_trip_selected.xml" value="0.2365" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_detail.xml" value="0.33" />
-        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide.xml" value="0.3625" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide.xml" value="0.17012448132780084" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide_mightrecycler_item.xml" value="0.75" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide_top_pick_recycler_item.xml" value="0.45169082125603865" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide_toppickrecycler_item.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_home_button_recycler_item.xml" value="0.3625" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_home_tab_layout_item.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_home_tab_layout_recycler_item.xml" value="0.3625" />
-        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search.xml" value="0.15479876160990713" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search_nearbyrecycler_item.xml" value="0.33" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search_toprecycler_item.xml" value="0.22507122507122507" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_trip.xml" value="0.3625" />
