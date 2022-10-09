@@ -22,29 +22,38 @@
         <LinearLayout
             android:id="@+id/home_filters"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_70sdp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/search_fragment_h1">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
-                android:layout_width="@dimen/_252sdp"
-                android:layout_height="@dimen/_17sdp"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_28sdp"
+                app:tabPaddingBottom="@dimen/_2sdp"
                 app:tabGravity="start"
+                app:tabIconTint="@color/customSecondary"
+                app:tabInlineLabel="true"
                 app:tabIndicatorColor="@color/customSecondary"
-                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorFullWidth="true"
                 app:tabSelectedTextColor="@color/customSecondary"
                 app:tabTextAppearance="@style/fragment_home_tablayout_text"
                 app:tabTextColor="@color/customPrimary" />
 
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_13sdp" />
+
         </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/idFABHome"
+            android:id="@+id/addTripButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_70sdp"
