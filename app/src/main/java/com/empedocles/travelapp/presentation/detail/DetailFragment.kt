@@ -41,7 +41,19 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        createView()
         observeLiveData()
+    }
+
+
+    private fun createView(){
+        binding.addBookMark.setOnClickListener{
+            viewModel.pageState.value?.selectedItem?.let { item ->
+                val isBookmark = !item.isBookmark
+                item.isBookmark = isBookmark
+                viewModel.bookMarkHandler(selectedId, isBookmark)
+            }
+        }
     }
 
 
