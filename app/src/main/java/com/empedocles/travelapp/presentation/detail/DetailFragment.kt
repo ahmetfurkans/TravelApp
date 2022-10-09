@@ -1,11 +1,15 @@
 package com.empedocles.travelapp.presentation.detail
 
+import android.graphics.RenderEffect
+import android.graphics.Shader
+import android.os.Build
 import android.os.Bundle
 import android.util.JsonWriter
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
 import com.empedocles.travelapp.R
@@ -45,13 +49,14 @@ class DetailFragment : Fragment() {
         observeLiveData()
     }
 
-
-    private fun createView(){
-        binding.addBookMark.setOnClickListener{
+    private fun createView() {
+        binding.addBookMark.setOnClickListener {
             viewModel.pageState.value?.selectedItem?.let { item ->
                 val isBookmark = !item.isBookmark
                 item.isBookmark = isBookmark
                 viewModel.bookMarkHandler(selectedId, isBookmark)
+                binding.addBookMark.text =
+                    if (item.isBookmark) "Remove Bookmark" else "Add Bookmark"
             }
         }
     }
@@ -70,7 +75,10 @@ class DetailFragment : Fragment() {
                     state.selectedItem?.images?.get(0)?.url?.let { image ->
                         println(state.selectedItem.toString())
                         binding.travelModel = state.selectedItem
-                        println(state.selectedItem?.title)
+                        state.selectedItem?.isBookmark?.let { isBookmark ->
+                            binding.addBookMark.text =
+                                if (isBookmark) "Remove Bookmark" else "Add Bookmark"
+                        }
                         binding.detailFragmentBanner.downloadFromUrl(
                             image,
                             circularProgressFactory(binding.root.context)
