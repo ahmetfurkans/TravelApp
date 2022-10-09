@@ -7,7 +7,7 @@ data class TravelModel(
     val description: String,
     val id: String,
     val images: List<Image>,
-    val isBookmark: Boolean,
+    var isBookmark: Boolean,
     val title: String
 )
 

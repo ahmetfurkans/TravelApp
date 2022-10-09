@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="travelModel"
             type="com.empedocles.travelapp.domain.model.TravelModel" />
@@ -17,6 +16,7 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
+            android:foreground="@drawable/main_gradiant_background"
             android:layout_width="@dimen/_86sdp"
             android:layout_height="@dimen/_95sdp"
             android:scaleType="centerCrop"

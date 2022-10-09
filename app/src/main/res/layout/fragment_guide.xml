@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
             android:text="@string/see_all"
             android:textColor="@color/customSecondary"
             android:textSize="@dimen/_8sdp"
@@ -47,15 +47,37 @@
             app:layout_constraintStart_toStartOf="@+id/might_need_h2"
             app:layout_constraintTop_toBottomOf="@+id/might_need_h2" />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/guide_fragment_search"
-            style="@style/search_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginHorizontal="@dimen/_11sdp"
             android:layout_marginTop="@dimen/_16sdp"
-            android:hint="Where next?"
+            app:circularflow_defaultRadius="@dimen/_3sdp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:boxStrokeWidth="1.8dp"
+            app:boxStrokeColor="@color/customSecondary"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/might_need_recycler" />
+            app:layout_constraintTop_toBottomOf="@+id/might_need_recycler">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00000000"
+                android:fontFamily="@font/source_sans_pro"
+                android:drawableEnd="@drawable/ic_search"
+                android:hint="A country, a city, a place... or anything " />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/button_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/might_need_h2"
+            app:layout_constraintTop_toBottomOf="@+id/guide_fragment_search" />
 
         <TextView
             android:id="@+id/toppick_need_h2"
@@ -63,7 +85,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:text="TOP-PICK ARTICLES"
             app:layout_constraintStart_toStartOf="@id/guide_fragment_h1"
-            app:layout_constraintTop_toBottomOf="@+id/guide_fragment_search" />
+            app:layout_constraintTop_toBottomOf="@+id/button_recycler" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/toppick_recycler"

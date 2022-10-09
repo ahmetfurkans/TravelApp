@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:scaleType="centerCrop"
+        app:cardCornerRadius="@dimen/_36sdp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.home_item">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_8ssp"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/button_image"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_search"/>
+
+            <TextView
+                android:id="@+id/button_text"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sightseeing"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textColor="#0048F0"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

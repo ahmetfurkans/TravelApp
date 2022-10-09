@@ -39,6 +39,7 @@ class GuideFragment : Fragment() {
     private fun createUi() {
         createMightRecycler()
         createTopPickRecycler()
+        createButtonRecycler()
     }
 
     private fun createMightRecycler() {
@@ -53,6 +54,10 @@ class GuideFragment : Fragment() {
         binding.toppickRecycler.adapter = topPickRecyclerAdapter
     }
 
+    private fun createButtonRecycler(){
+        binding.buttonRecycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.buttonRecycler.adapter = GuideButtonRecyclerAdapter()
+    }
 
     private fun observeLiveData() {
         viewModel.pageState.observe(viewLifecycleOwner) {

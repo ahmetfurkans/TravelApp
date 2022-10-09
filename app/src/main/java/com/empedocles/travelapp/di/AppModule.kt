@@ -5,8 +5,10 @@ import androidx.room.Room
 import com.empedocles.travelapp.data.local.BookMarkDataBase
 import com.empedocles.travelapp.data.remote.TravelApiService
 import com.empedocles.travelapp.data.repository.AllTravelItemRepositoryImpl
+import com.empedocles.travelapp.data.repository.BookMarkRepositoryImpl
 import com.empedocles.travelapp.data.repository.SingleTravelItemRepositoryImpl
 import com.empedocles.travelapp.domain.repository.AllTravelItemRepository
+import com.empedocles.travelapp.domain.repository.BookMarkRepository
 import com.empedocles.travelapp.domain.repository.SingleTravelItemRepository
 import com.empedocles.travelapp.util.Constants.Companion.BASE_URL
 import dagger.Module
@@ -62,6 +64,12 @@ object AppModule {
     @Singleton
     fun provideSingleTravelItemRepository(service: TravelApiService): SingleTravelItemRepository {
         return SingleTravelItemRepositoryImpl(service)
+    }
+
+    @Provides
+    @Singleton
+    fun provideBookMarkRepository(service: TravelApiService) : BookMarkRepository{
+        return BookMarkRepositoryImpl(service)
     }
 
 }

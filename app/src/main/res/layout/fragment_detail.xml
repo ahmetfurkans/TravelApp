@@ -72,6 +72,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fragment_detail_h2" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addBookMark"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_40ssp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:backgroundTint="@color/customSecondary"
+            android:fontFamily="@font/montserrat_alternates_semibold"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:text="Add Bookmark"
+            android:background="@drawable/fragment_home_button"
+            android:textColor="@color/customWhite"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,6 +1,7 @@
 package com.empedocles.travelapp.presentation.detail
 
 import android.os.Bundle
+import android.util.JsonWriter
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,13 +22,16 @@ import dagger.hilt.android.qualifiers.ActivityContext
 class DetailFragment : Fragment() {
     private val viewModel by viewModels<DetailViewModel>()
     private lateinit var binding: FragmentDetailBinding
+    private lateinit var selectedId: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         arguments?.getString("id")?.let { id ->
+            selectedId = id
             viewModel.loadSelectedItem(id)
         }
         binding = FragmentDetailBinding.inflate(inflater)
@@ -40,6 +44,7 @@ class DetailFragment : Fragment() {
         observeLiveData()
     }
 
+
     private fun observeLiveData() {
         viewModel.pageState.observe(viewLifecycleOwner) {
             this.viewModel.pageState.value?.let { state ->
@@ -48,12 +53,16 @@ class DetailFragment : Fragment() {
                 }
                 if (state.isError) {
                     println("there is a error")
-                }else{
+                } else {
                     println(state.selectedItem?.description)
-                    state.selectedItem?.images?.get(0)?.url?.let { image->
+                    state.selectedItem?.images?.get(0)?.url?.let { image ->
+                        println(state.selectedItem.toString())
                         binding.travelModel = state.selectedItem
                         println(state.selectedItem?.title)
-                        binding.detailFragmentBanner.downloadFromUrl(image, circularProgressFactory(binding.root.context))
+                        binding.detailFragmentBanner.downloadFromUrl(
+                            image,
+                            circularProgressFactory(binding.root.context)
+                        )
                     }
                 }
             }

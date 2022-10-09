@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_120sdp"
             android:scaleType="centerCrop"
+            android:foreground="@drawable/main_gradiant_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.home_item"

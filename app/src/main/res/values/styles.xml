@@ -53,4 +53,5 @@
         <item name="android:layout_marginHorizontal">@dimen/_11sdp</item>
         <item name="android:drawableEnd">@drawable/ic_search</item>
     </style>
+
 </resources>

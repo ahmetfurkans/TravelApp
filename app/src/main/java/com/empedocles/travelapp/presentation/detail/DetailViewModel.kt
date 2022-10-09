@@ -4,21 +4,24 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.empedocles.travelapp.domain.model.TravelModel
-import com.empedocles.travelapp.domain.repository.SingleTravelItemRepository
+import com.empedocles.travelapp.domain.usecase.BookMarkUseCase
 import com.empedocles.travelapp.domain.usecase.SingleTravelItemUseCase
 import com.empedocles.travelapp.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import okhttp3.MediaType
+import okhttp3.RequestBody
 import javax.inject.Inject
+
 
 @HiltViewModel
 class DetailViewModel @Inject constructor(
-    private val singleTravelItemUseCase: SingleTravelItemUseCase
+    private val singleTravelItemUseCase: SingleTravelItemUseCase,
 ) : ViewModel() {
 
     private val _pageState = MutableLiveData<DetailState>(DetailState())
     val pageState: LiveData<DetailState> = _pageState
+
 
     fun loadSelectedItem(id: String) {
         viewModelScope.launch {
