@@ -56,27 +56,15 @@ class TripFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        viewModel.pageState.observe(viewLifecycleOwner) {
-            this.viewModel.pageState.value?.let { state ->
-                if (state.isLoading) {
-                    println("loading")
-                }
-                if (state.isError) {
-                    println("there is a error")
-                }
-                if (state.trip.isEmpty()) {
-                    println("null")
-                } else {
-                    println("not null")
-                    println(viewModel.pageState.value?.trip?.get(1)?.description)
-                    adapter.updateList(
-                        arrayListOf(
-                            state.trip,
-                            state.bookmark
-                        )
-                    )
-                }
-            }
+        viewModel.loadAllTravelItem().observe(viewLifecycleOwner){
+            val bookmark = it.filter { item -> item.isBookmark == true }
+            val trip = it
+            adapter.updateList(
+                arrayListOf(
+                    bookmark,
+                    trip
+                )
+            )
         }
     }
 }
