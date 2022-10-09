@@ -41,7 +41,7 @@ class TripFragment : Fragment() {
         val tabItems = arrayListOf<ButtonModel>(
             ButtonModel(R.drawable.ic_trip, "Trips"),
             ButtonModel(R.drawable.ic_bookmark, "Bookmark")
-            )
+        )
 
         val viewpager = binding.viewPager
         val tabLayout = binding.tabLayout
@@ -56,13 +56,13 @@ class TripFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        viewModel.loadAllTravelItem().observe(viewLifecycleOwner){
+        viewModel.loadAllTravelItem().observe(viewLifecycleOwner) {
             val bookmark = it.filter { item -> item.isBookmark == true }
             val trip = it
             adapter.updateList(
                 arrayListOf(
-                    bookmark,
-                    trip
+                    trip,
+                    bookmark
                 )
             )
         }

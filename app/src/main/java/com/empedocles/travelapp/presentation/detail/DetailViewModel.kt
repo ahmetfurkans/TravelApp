@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.empedocles.travelapp.domain.usecase.AllTravelItemUseCase
 import com.empedocles.travelapp.domain.usecase.BookMarkUseCase
 import com.empedocles.travelapp.domain.usecase.SingleTravelItemUseCase
 import com.empedocles.travelapp.util.Resource
@@ -23,6 +24,7 @@ import javax.inject.Inject
 @HiltViewModel
 class DetailViewModel @Inject constructor(
     private val singleTravelItemUseCase: SingleTravelItemUseCase,
+    private val allTravelItemUseCase: AllTravelItemUseCase,
     private val bookMarkUseCase: BookMarkUseCase
 ) : ViewModel() {
 
@@ -34,7 +36,10 @@ class DetailViewModel @Inject constructor(
             when (val result = bookMarkUseCase.changeBookMark(
                 id, isBookmark)){
                 is Resource.Success -> {
-                    println(result.data?.isBookmark)
+                    allTravelItemUseCase.apply {
+                        getAllTravelItem()
+                        allTravelList.value?.find { it.id == id }?.isBookmark = isBookmark
+                    }
                 }
                 else -> {
                     println(result.message)

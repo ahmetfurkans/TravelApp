@@ -20,40 +20,11 @@ class HomeViewModel @Inject constructor(
     private val _pageState = MutableLiveData<HomeState>(HomeState())
     val pageState: LiveData<HomeState> = _pageState
 
-    init {
-        loadAllTravelItem()
-    }
-
-    private fun loadAllTravelItem(
-    ) {
-        viewModelScope.launch {
-            when (val result = allTravelItemUseCase.invoke()) {
-                is Resource.Error -> {
-                    _pageState.value = _pageState.value?.also {
-                        it.isLoading = false
-                        it.isError = false
-                    }
-                }
-                is Resource.Loading -> {
-                    _pageState.value = _pageState.value?.also {
-                        it.isLoading = true
-                    }
-                }
-                is Resource.Success -> {
-                    _pageState.value = _pageState.value?.also {
-                        it.isLoading = false
-                        it.isError = false
-                        it.allTravelItem = result.data ?: emptyList()
-                        it.hotels =
-                            result.data?.filter { item -> item.category == "hotel" } ?: emptyList()
-                        it.flights =
-                            result.data?.filter { item -> item.category == "flight" } ?: emptyList()
-                        it.transportation =
-                            result.data?.filter { item -> item.category == "transportation" }
-                                ?: emptyList()
-                    }
-                }
-            }
+    fun loadAllTravelItem(
+    ): LiveData<List<TravelModel>> {
+        allTravelItemUseCase.apply {
+            getAllTravelItem()
+            return allTravelList
         }
     }
 }

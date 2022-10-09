@@ -19,10 +19,6 @@ class TripViewModel @Inject constructor(
     private val _pageState = MutableLiveData<TripState>(TripState())
     val pageState: LiveData<TripState> = _pageState
 
-    init {
-        loadAllTravelItem()
-    }
-
     fun loadAllTravelItem(
     ) : LiveData<List<TravelModel>> {
         allTravelItemUseCase.apply {

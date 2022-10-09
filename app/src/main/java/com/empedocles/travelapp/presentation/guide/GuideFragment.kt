@@ -60,26 +60,13 @@ class GuideFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        viewModel.pageState.observe(viewLifecycleOwner) {
-            this.viewModel.pageState.value?.let { state ->
-                if (state.isLoading) {
-                    println("loading")
-                }
-                if (state.isError) {
-                    println("there is a error")
-                }
-                if (state.allTravelItem.isEmpty()) {
-                    println("null")
-                } else {
-                    println("not null")
-                    mightNeedAdapter.updateList(
-                        state.mightneed
-                    )
-                    topPickRecyclerAdapter.updateList(
-                        state.toppick
-                    )
-                }
-            }
+        viewModel.loadAllTravelItem().observe(viewLifecycleOwner) {
+            val topPicks = it.filter { item -> item.category == "toppick" }
+            val mightneed = it.filter { item -> item.category == "mightneed" }
+            topPickRecyclerAdapter.updateList(
+                topPicks
+            )
+            mightNeedAdapter.updateList(mightneed)
         }
     }
 }

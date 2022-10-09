@@ -31,7 +31,6 @@ class SearchFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         createUi()
         observeLiveData()
     }
@@ -54,27 +53,13 @@ class SearchFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-
-        viewModel.pageState.observe(viewLifecycleOwner) {
-            this.viewModel.pageState.value?.let { state ->
-                if (state.isLoading) {
-                    println("loading")
-                }
-                if (state.isError) {
-                    println("there is a error")
-                }
-                if (state.allTravelItem.isEmpty()) {
-                    println("null")
-                } else {
-                    println("not null")
-                    topDestinationAdapter.updateList(
-                        state.topDestination
-                    )
-                    nearbyAdapter.updateList(
-                        state.nearby
-                    )
-                }
-            }
+        viewModel.loadAllTravelItem().observe(viewLifecycleOwner) {
+            val topDestination = it.filter { item -> item.category == "topdestination" }
+            val nearby = it.filter { item -> item.category == "nearby" }
+            topDestinationAdapter.updateList(
+                topDestination
+            )
+            nearbyAdapter.updateList(nearby)
         }
     }
 

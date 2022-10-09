@@ -72,29 +72,16 @@ class HomeFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        viewModel.pageState.observe(viewLifecycleOwner) {
-            this.viewModel.pageState.value?.let { state ->
-                if (state.isLoading) {
-                    println("loading")
-                }
-                if (state.isError) {
-                    println("there is a error")
-                }
-                if (state.allTravelItem.isEmpty()) {
-                    println("null")
-                } else {
-                    println("not null")
-                    adapter.updateList(
-                        listOf(
-                            state.allTravelItem,
-                            state.hotels,
-                            state.flights,
-                            state.transportation
-                        )
-                    )
-                }
-            }
+        viewModel.loadAllTravelItem().observe(viewLifecycleOwner) {
+            val hotels = it.filter { item -> item.category == "hotel" }
+            val flights = it.filter { item -> item.category == "flight" }
+            val transportations = it.filter { item -> item.category == "transportation" }
+            val all = it.subList(5, 15)
+            adapter.updateList(
+                arrayListOf(
+                    all, hotels, flights, transportations
+                )
+            )
         }
     }
-
 }
