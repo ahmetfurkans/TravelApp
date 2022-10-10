@@ -9,9 +9,11 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_height="@dimen/_26sdp"
         android:layout_marginEnd="@dimen/_6sdp"
         android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_1sdp"
         app:cardCornerRadius="@dimen/_36sdp"
         app:cardPreventCornerOverlap="true"
         app:layout_constraintStart_toStartOf="parent"

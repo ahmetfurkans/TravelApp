@@ -16,9 +16,8 @@ import dagger.hilt.android.AndroidEntryPoint
 class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
     private var topDestinationAdapter = TopDestinationAdapter(arrayListOf())
-    private var nearbyAdapter = NearbyAdapter(arrayListOf())
-
     private val viewModel by viewModels<SearchViewModel>()
+    private var nearbyAdapter = NearbyAdapter(arrayListOf())
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

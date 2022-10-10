@@ -11,12 +11,14 @@
     </data>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_210sdp"
-        android:layout_marginEnd="@dimen/_22sdp"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_190sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:scaleType="centerCrop"
         app:cardCornerRadius="@dimen/_6sdp"
         app:cardPreventCornerOverlap="true"
+        android:background="#FCFCFD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.home_item">
@@ -27,12 +29,22 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/topImage"
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_130sdp"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_110sdp"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/bookmarkButton"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:src="@drawable/ic_bookmark"
+                app:layout_constraintEnd_toEndOf="@id/topImage"
+                app:layout_constraintTop_toTopOf="@id/topImage" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -43,7 +55,8 @@
                 android:fontFamily="@font/source_sans_pro_bold"
                 android:text="@{travelModel.title}"
                 android:textColor="#0048F0"
-                android:textSize="@dimen/_10sdp"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/topImage" />
 
@@ -54,7 +67,7 @@
                 android:fontFamily="@font/source_sans_pro_bold"
                 android:text="@{travelModel.description}"
                 android:textColor="#181A25"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/_13sdp"
                 app:layout_constraintStart_toStartOf="@id/textView3"
                 app:layout_constraintTop_toBottomOf="@id/textView3" />
 

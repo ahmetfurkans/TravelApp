@@ -40,10 +40,12 @@ class TopPickRecyclerAdapter(private val travelList: ArrayList<TravelModel>) :
                 val bundle = bundleOf("id" to travelModel.id)
                 it.findNavController().navigate(R.id.action_global_detailFragment, bundle)
             }
+            val bookMarkDrawable = if (travelModel.isBookmark) R.drawable.ic_bookmark_selected else R.drawable.ic_bookmark
+            binding.bookmarkButton.setImageResource(bookMarkDrawable)
             binding.root.context as? LifecycleOwner
             binding.travelModel = travelModel
             binding.topImage.downloadFromUrl(
-                travelModel.images.get(0).url, circularProgressFactory(binding.root.context)
+                travelModel.images.get(1).url, circularProgressFactory(binding.root.context)
             )
         }
     }

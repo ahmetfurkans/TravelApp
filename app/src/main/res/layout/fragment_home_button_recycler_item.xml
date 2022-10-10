@@ -14,12 +14,12 @@
 
         <ImageButton
             android:id="@+id/buttonImage"
-            android:layout_width="@dimen/_45sdp"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_width="@dimen/_43sdp"
+            android:layout_height="@dimen/_43sdp"
             android:layout_gravity="center"
             android:background="@drawable/home_fragment_recycler_button_item_bg"
             android:padding="@dimen/_10sdp"
-            android:scaleType="fitXY" />
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/buttonText"
@@ -29,6 +29,6 @@
             android:layout_marginTop="@dimen/_8sdp"
             android:fontFamily="@font/source_sans_pro_bold"
             android:textColor="#FCFCFD"
-            android:textSize="@dimen/_10sdp" />
+            android:textSize="@dimen/_11sdp" />
     </LinearLayout>
 </layout>

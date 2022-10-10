@@ -26,11 +26,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_13sdp"
-            android:layout_marginTop="@dimen/_177sdp"
+            android:layout_marginTop="@dimen/_165sdp"
             android:fontFamily="@font/source_sans_pro_bold"
             android:text="Where’s your\nnext destination?"
             android:textColor="@color/white"
-            android:textSize="@dimen/_20ssp"
+            android:textSize="@dimen/_22ssp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/fragment_home_banner"
             app:layout_constraintTop_toTopOf="@id/fragment_home_banner" />

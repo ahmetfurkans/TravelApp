@@ -17,7 +17,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
             android:layout_width="@dimen/_112sdp"
-            android:layout_height="@dimen/_150sdp"
+            android:layout_height="@dimen/_140sdp"
             android:foreground="@drawable/main_gradiant_background"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
             android:gravity="center"
             android:text="@{travelModel.title}"
             android:textColor="#FCFCFD"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_13sdp"
             app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.5"

@@ -18,7 +18,7 @@
             android:id="@+id/imageView"
             android:foreground="@drawable/main_gradiant_background"
             android:layout_width="@dimen/_86sdp"
-            android:layout_height="@dimen/_95sdp"
+            android:layout_height="@dimen/_90sdp"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

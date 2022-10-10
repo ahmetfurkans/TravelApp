@@ -1,6 +1,8 @@
 package com.empedocles.travelapp.presentation.search
 
 import android.view.LayoutInflater
+import android.view.ScrollCaptureCallback
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.lifecycle.LifecycleOwner
@@ -36,10 +38,13 @@ class NearbyAdapter (private val travelList: ArrayList<TravelModel>) :
     class ItemHolder(private val binding: FragmentSearchNearbyrecyclerItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(travelModel: TravelModel) {
+            val bookMarkDrawable = if (travelModel.isBookmark) R.drawable.ic_bookmark_selected else R.drawable.ic_bookmark
+            binding.bookmarkButton.setImageResource(bookMarkDrawable)
             binding.imageView.setOnClickListener {
                 val bundle = bundleOf("id" to travelModel.id)
                 it.findNavController().navigate(R.id.action_global_detailFragment, bundle)
             }
+
             binding.root.context as? LifecycleOwner
             binding.travelModel = travelModel
             binding.imageView.downloadFromUrl(
