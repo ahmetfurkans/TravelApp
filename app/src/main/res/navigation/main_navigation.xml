@@ -8,6 +8,9 @@
     <action android:id="@+id/action_global_detailFragment"
         app:destination="@id/detailFragment"/>
 
+    <action android:id="@+id/action_global_searchResultFragment"
+        app:destination="@id/searchResultFragment"/>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.empedocles.travelapp.presentation.home.HomeFragment"
@@ -35,6 +38,15 @@
         tools:layout="@layout/fragment_detail" >
         <argument
             android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.empedocles.travelapp.presentation.search_result.SearchResultFragment"
+        android:label="fragment_search_result"
+        tools:layout="@layout/fragment_search_result" >
+        <argument
+            android:name="query"
             app:argType="string" />
     </fragment>
 </navigation>

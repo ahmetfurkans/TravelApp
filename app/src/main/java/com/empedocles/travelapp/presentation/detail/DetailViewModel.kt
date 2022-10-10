@@ -34,7 +34,8 @@ class DetailViewModel @Inject constructor(
     fun bookMarkHandler(id: String, isBookmark: Boolean) {
         viewModelScope.launch {
             when (val result = bookMarkUseCase.changeBookMark(
-                id, isBookmark)){
+                id, isBookmark
+            )) {
                 is Resource.Success -> {
                     allTravelItemUseCase.apply {
                         getAllTravelItem()

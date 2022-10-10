@@ -14,6 +14,9 @@ interface TravelApiService {
     @GET("AllTravelList/{id}")
     suspend fun getTravelItem(@Path("id") id: String): Response<TravelModel>
 
+    @GET("AllTravelList")
+    suspend fun searchAllTravelList(@Query("search") searchQuery: String): Response<List<TravelModel>>
+
     @FormUrlEncoded
     @PUT("AllTravelList/{id}")
     suspend fun putTravelItem(

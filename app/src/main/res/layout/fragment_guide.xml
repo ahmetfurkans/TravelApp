@@ -56,6 +56,9 @@
             android:layout_marginTop="@dimen/_2sdp"
             app:circularflow_defaultRadius="@dimen/_3sdp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_search"
+            app:endIconTint="@color/customSecondary"
             app:boxStrokeWidth="1.2dp"
             app:boxStrokeColor="@color/customSecondary"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,10 +67,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/searchText"
                 android:backgroundTint="#00000000"
                 android:textSize="@dimen/_12ssp"
                 android:fontFamily="@font/source_sans_pro"
-                android:drawableEnd="@drawable/ic_search"
                 android:hint="A country, a city, a place... or anything " />
         </com.google.android.material.textfield.TextInputLayout>
 

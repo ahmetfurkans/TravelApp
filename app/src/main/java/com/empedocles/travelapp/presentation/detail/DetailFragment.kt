@@ -61,7 +61,6 @@ class DetailFragment : Fragment() {
         }
     }
 
-
     private fun observeLiveData() {
         viewModel.pageState.observe(viewLifecycleOwner) {
             this.viewModel.pageState.value?.let { state ->

@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             val navHostFragment = supportFragmentManager
                 .findFragmentById(fragmentContainerView.id) as NavHostFragment
             navHostFragment.navController.addOnDestinationChangedListener { _, destination, _ ->
-                if (destination.id == R.id.detailFragment) {
+                if (destination.id == R.id.detailFragment || destination.id == R.id.searchResultFragment) {
                     binding.bottomNav.visibility = View.GONE
                 } else {
                     binding.bottomNav.visibility = View.VISIBLE

@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.empedocles.travelapp.R
 import com.empedocles.travelapp.databinding.FragmentSearchBinding
@@ -37,6 +39,11 @@ class SearchFragment : Fragment() {
     private fun createUi() {
         createTopDestinationRecycler()
         createNearbyRecycler()
+        binding.searchFragmentSearch.setEndIconOnClickListener {
+            val query = binding.searchField.text.toString()
+            val bundle = bundleOf("query" to query)
+            it.findNavController().navigate(R.id.action_global_searchResultFragment, bundle)
+        }
     }
 
     private fun createTopDestinationRecycler() {
