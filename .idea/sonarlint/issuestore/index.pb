@@ -65,8 +65,6 @@ Yapp/src/main/java/com/empedocles/travelapp/presentation/guide/MightNeedRecycler
 Mapp/src/main/java/com/empedocles/travelapp/presentation/detail/DetailState.kt,c\4\c49cdc8d31dc154c7fe0acce6117cbdfd795f527
 }
 Mapp/src/main/java/com/empedocles/travelapp/presentation/search/SearchState.kt,d\0\d0e12d78a50d493b2089ea1afc72cf4149a9bb5b
-
-Oapp/src/main/java/com/empedocles/travelapp/presentation/search/NearbyAdapter.kt,4\4\44f64315e2a5a3b2109c13d916eafa6511863911
 €
 Papp/src/main/java/com/empedocles/travelapp/presentation/search/SearchFragment.kt,6\f\6fdd13a2d363c230554b12d16588c6a263f0f0e6
 ‡

@@ -11,18 +11,18 @@ import com.empedocles.travelapp.data.local.TripEntity
 import com.empedocles.travelapp.databinding.FragmentTripBinding
 import com.empedocles.travelapp.domain.model.TravelModel
 import com.empedocles.travelapp.presentation.home.ButtonModel
+import com.empedocles.travelapp.util.toDateString
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class TripFragment : Fragment() {
     private lateinit var binding: FragmentTripBinding
-    private val emptyList = ArrayList<List<TravelModel>>()
     private val viewModel by viewModels<TripViewModel>()
-    private var tripList = listOf<TripEntity>()
-    private var bookMarkList = listOf<TravelModel>()
+    private var tripList = arrayListOf<TripEntity>()
+    private var bookMarkList = arrayListOf<TravelModel>()
 
-    private val adapter = ViewPagerAdapter(emptyList)
+    private val adapter = ViewPagerAdapter(tripList, bookMarkList)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,20 +63,39 @@ class TripFragment : Fragment() {
 
     private fun observeLiveData() {
         viewModel.loadAllTravelItem().observe(viewLifecycleOwner) {
-            val bookmark = it.filter { item -> item.isBookmark == true }
-            val trip = it
-            adapter.updateList(
-                arrayListOf(
-                    trip,
-                    bookmark
-                )
-            )
+            bookMarkList.clear()
+            bookMarkList.addAll(it.filter { item -> item.isBookmark == true })
+            val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
+            binding.viewPager.adapter = newAdapter
+            if (tripList.isNotEmpty()) {
+                tripList.forEach{ println(it.city)}
+                val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
+                binding.viewPager.adapter = newAdapter
+            }
+            if (bookMarkList.isNotEmpty()) {
+                println("bookmark list + observer")
+                println(bookMarkList[1].city)
+            }
         }
+        observeTripRoomLiveData()
     }
 
-    private fun observeTripRoomLiveData(){
-        viewModel.loadAllTravelItemFromRoom().observe(viewLifecycleOwner){
-            tripList = it
+    private fun observeTripRoomLiveData() {
+        viewModel.loadAllTravelItemFromRoom().observe(viewLifecycleOwner) {
+            tripList.clear()
+            tripList.addAll(it)
         }
+        val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
+        binding.viewPager.adapter = newAdapter
+
+        if (tripList.isNotEmpty()) {
+            println("trip list + observer")
+            println(tripList.get(1).city)
+        }
+        if (bookMarkList.isNotEmpty()) {
+            println("trip list + observer")
+            println(bookMarkList[1].city)
+        }
+
     }
 }
