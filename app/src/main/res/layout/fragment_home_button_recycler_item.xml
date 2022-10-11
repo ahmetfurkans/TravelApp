@@ -9,7 +9,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_24sdp"
-        android:clickable="true"
         android:orientation="vertical">
 
         <ImageButton
@@ -18,6 +17,7 @@
             android:layout_height="@dimen/_43sdp"
             android:layout_gravity="center"
             android:background="@drawable/home_fragment_recycler_button_item_bg"
+            android:contentDescription="@string/home_button_background"
             android:padding="@dimen/_10sdp"
             android:scaleType="centerCrop" />
 
@@ -29,6 +29,6 @@
             android:layout_marginTop="@dimen/_8sdp"
             android:fontFamily="@font/source_sans_pro_bold"
             android:textColor="#FCFCFD"
-            android:textSize="@dimen/_11sdp" />
+            android:textSize="@dimen/_11ssp" />
     </LinearLayout>
 </layout>

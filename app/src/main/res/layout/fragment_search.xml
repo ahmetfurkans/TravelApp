@@ -15,14 +15,14 @@
         <TextView
             android:id="@+id/search_fragment_h1"
             style="@style/fragment_tab_text"
-            android:text="Search"
+            android:text="@string/search"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_fragment_search"
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/_36sdp"
             android:layout_marginHorizontal="@dimen/_11sdp"
             android:layout_marginTop="@dimen/_19sdp"
@@ -37,16 +37,17 @@
 
             <EditText
                 android:id="@+id/searchField"
-                android:textColorHint="#52577A"
                 style="@style/search_text"
-                android:hint="Where next?" />
+                android:hint="@string/where_next"
+                android:inputType="text"
+                android:textColorHint="#52577A" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/search_fragment_h2"
             style="@style/recyclerview_text"
             android:layout_marginTop="@dimen/_10sdp"
-            android:text="TOP DESTINATIONS"
+            android:text="@string/top_destinations"
             app:layout_constraintStart_toStartOf="@+id/search_fragment_h1"
             app:layout_constraintTop_toBottomOf="@+id/search_fragment_search" />
 
@@ -64,7 +65,7 @@
             android:id="@+id/search_fragment_h3"
             style="@style/recyclerview_text"
             android:layout_marginTop="@dimen/_7sdp"
-            android:text="NEARBY ATTRACTIONS"
+            android:text="@string/nearby_attractions"
             app:layout_constraintStart_toStartOf="@+id/top_destination_recycler"
             app:layout_constraintTop_toBottomOf="@id/top_destination_recycler" />
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="travelModel"
             type="com.empedocles.travelapp.domain.model.TravelModel" />
@@ -16,9 +17,9 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
-            android:foreground="@drawable/main_gradiant_background"
             android:layout_width="@dimen/_86sdp"
             android:layout_height="@dimen/_90sdp"
+            android:foreground="@drawable/main_gradiant_background"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -29,11 +30,11 @@
             android:layout_width="@dimen/_74sdp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_50sdp"
-            android:fontFamily="@font/source_sans_pro_bold"
-            android:textColor="@color/customWhite"
             android:layout_marginBottom="@dimen/_6sdp"
-            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/source_sans_pro_bold"
             android:text="@{travelModel.title}"
+            android:textColor="@color/customWhite"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView"

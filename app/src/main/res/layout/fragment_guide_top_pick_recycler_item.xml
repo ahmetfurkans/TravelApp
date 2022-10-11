@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -15,10 +14,10 @@
         android:layout_height="@dimen/_190sdp"
         android:layout_marginStart="@dimen/_2sdp"
         android:layout_marginEnd="@dimen/_10sdp"
+        android:background="#FCFCFD"
         android:scaleType="centerCrop"
         app:cardCornerRadius="@dimen/_6sdp"
         app:cardPreventCornerOverlap="true"
-        android:background="#FCFCFD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.home_item">
@@ -42,6 +41,7 @@
                 android:layout_height="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:layout_marginEnd="@dimen/_8sdp"
+                android:contentDescription="@string/bookmark_icon"
                 android:src="@drawable/ic_bookmark"
                 app:layout_constraintEnd_toEndOf="@id/topImage"
                 app:layout_constraintTop_toTopOf="@id/topImage" />
@@ -54,9 +54,9 @@
                 android:layout_marginTop="@dimen/_6sdp"
                 android:fontFamily="@font/source_sans_pro_bold"
                 android:text="@{travelModel.title}"
-                android:textColor="#0048F0"
                 android:textAllCaps="true"
-                android:textSize="@dimen/_8sdp"
+                android:textColor="#0048F0"
+                android:textSize="@dimen/_8ssp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/topImage" />
 
@@ -67,7 +67,7 @@
                 android:fontFamily="@font/source_sans_pro_bold"
                 android:text="@{travelModel.description}"
                 android:textColor="#181A25"
-                android:textSize="@dimen/_13sdp"
+                android:textSize="@dimen/_13ssp"
                 app:layout_constraintStart_toStartOf="@id/textView3"
                 app:layout_constraintTop_toBottomOf="@id/textView3" />
 

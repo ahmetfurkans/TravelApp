@@ -21,25 +21,25 @@
             android:layout_height="@dimen/_300sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <me.relex.circleindicator.CircleIndicator
             android:id="@+id/indicator"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:elevation="4dp"
             app:layout_constraintBottom_toBottomOf="@id/detail_fragment_banner"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:elevation="4dp"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
             android:id="@+id/backIcon"
             android:layout_width="@dimen/_22sdp"
             android:layout_height="@dimen/_22sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
             android:background="@drawable/fragment_detail_back_icon"
+            android:contentDescription="@string/backbutton"
             android:src="@drawable/fragment_detail_ic_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -49,11 +49,11 @@
             android:layout_width="@dimen/_240sdp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_13sdp"
             android:fontFamily="@font/montserrat"
             android:text="@{travelModel.title}"
-            android:layout_marginTop="@dimen/_13sdp"
             android:textColor="#0A2753"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_20ssp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detail_fragment_banner" />
 
@@ -61,18 +61,20 @@
         <ImageButton
             android:layout_width="@dimen/_26sdp"
             android:layout_height="@dimen/_26sdp"
-            android:background="@drawable/fragment_detail_like_button_radius"
-            android:src="@drawable/ic_like"
-            app:layout_constraintTop_toBottomOf="@id/detail_fragment_banner"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_17sdp"
             android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_17sdp"/>
+            android:background="@drawable/fragment_detail_like_button_radius"
+            android:contentDescription="@string/like_button"
+            android:src="@drawable/ic_like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_fragment_banner" />
 
         <ImageView
             android:id="@+id/detail_fragment_pin_icon"
             android:layout_width="@dimen/_6sdp"
             android:layout_height="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_4sdp"
+            android:contentDescription="@string/pin_icon"
             android:src="@drawable/ic_pin"
             app:layout_constraintStart_toStartOf="@id/fragment_detail_h1"
             app:layout_constraintTop_toBottomOf="@id/fragment_detail_h1" />
@@ -85,20 +87,20 @@
             android:fontFamily="@font/montserrat_light"
             android:text="@{travelModel.city}"
             android:textColor="#39414B"
-            android:textSize="@dimen/_12sdp"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintStart_toEndOf="@id/detail_fragment_pin_icon"
             app:layout_constraintTop_toBottomOf="@id/fragment_detail_h1" />
 
         <TextView
-            android:scrollbars="vertical"
             android:id="@+id/fragment_detail_h3"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_110sdp"
             android:layout_marginHorizontal="@dimen/_14sdp"
             android:fontFamily="@font/montserrat_light"
+            android:scrollbars="vertical"
             android:text="@{travelModel.description}"
             android:textColor="#39414B"
-            android:textSize="@dimen/_12sdp"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fragment_detail_h2" />
@@ -110,12 +112,11 @@
             android:layout_marginBottom="@dimen/_25sdp"
             android:background="@drawable/fragment_home_button"
             android:backgroundTint="@color/customSecondary"
-            android:clickable="true"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="Add Bookmark"
+            android:text="@string/add_bookmark"
             android:textAllCaps="false"
             android:textColor="@color/customWhite"
-            android:textSize="@dimen/_12sdp"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -134,14 +135,13 @@
             android:id="@+id/error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Something went wrong"
-            android:visibility="gone"
+            android:text="@string/something_went_wrong"
             android:textSize="@dimen/_22ssp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

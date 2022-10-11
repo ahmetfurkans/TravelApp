@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/search_result_fragment_h1"
             style="@style/fragment_tab_text"
-            android:text="Search Result"
+            android:text="@string/Search_result"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,9 +23,10 @@
             android:id="@+id/backIcon"
             android:layout_width="@dimen/_21sdp"
             android:layout_height="@dimen/_21sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
             android:background="@drawable/fragment_search_result_back_bg"
+            android:contentDescription="@string/back_icon"
             android:src="@drawable/ic_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/search_result_fragment_h1" />
@@ -34,10 +35,10 @@
             android:id="@+id/search_query"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/source_sans_pro"
-            android:text="Search Result"
-            android:textSize="@dimen/_12ssp"
             android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/source_sans_pro"
+            android:text="@string/search_result"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintStart_toStartOf="@+id/search_result_fragment_h1"
             app:layout_constraintTop_toBottomOf="@+id/search_result_fragment_h1" />
 
@@ -45,14 +46,13 @@
             android:id="@+id/no_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No Travel Found"
-            android:visibility="gone"
+            android:text="@string/no_travel_found"
             android:textSize="@dimen/_22ssp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/search_result_recycler"

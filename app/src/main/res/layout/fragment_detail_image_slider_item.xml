@@ -13,9 +13,9 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/detail_fragment_banner"
             android:layout_width="match_parent"
-            android:shadowColor="#802B3C4D"
             android:layout_height="@dimen/_300sdp"
             android:scaleType="centerCrop"
+            android:shadowColor="#802B3C4D"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

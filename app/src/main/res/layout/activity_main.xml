@@ -18,15 +18,15 @@
             android:layout_width="@dimen/_239sdp"
             android:layout_height="@dimen/_43sdp"
             android:layout_marginTop="@dimen/_515sdp"
-            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/bottom_navigation_background_shape"
             android:padding="@dimen/_4sdp"
-            app:itemIconTint="@drawable/bottom_navigation_color_selector"
             app:itemBackground="@drawable/bottom_navigation_item_selector"
+            app:itemIconSize="@dimen/_18sdp"
+            app:itemIconTint="@drawable/bottom_navigation_color_selector"
             app:labelVisibilityMode="unlabeled"
             app:layout_constraintEnd_toEndOf="parent"
-            app:itemIconSize="@dimen/_18sdp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:menu="@menu/bottom_navigation" />
 
         <androidx.fragment.app.FragmentContainerView

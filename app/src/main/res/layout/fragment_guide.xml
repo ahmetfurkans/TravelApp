@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/guide_fragment_h1"
             style="@style/fragment_tab_text"
-            android:text="Guide"
+            android:text="@string/guide"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +23,7 @@
             android:id="@+id/might_need_h2"
             style="@style/recyclerview_text"
             android:layout_marginTop="@dimen/_18sdp"
-            android:text="MIGHT NEED THESE"
+            android:text="@string/might_need_these"
             app:layout_constraintStart_toStartOf="@id/guide_fragment_h1"
             app:layout_constraintTop_toBottomOf="@+id/guide_fragment_h1" />
 
@@ -32,8 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_13sdp"
-            android:text="@string/see_all"
             android:fontFamily="@font/source_sans_pro_bold"
+            android:text="@string/see_all"
             android:textColor="@color/customSecondary"
             android:textSize="@dimen/_10ssp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,9 +65,10 @@
 
             <EditText
                 android:id="@+id/searchText"
-                android:textColorHint="#52577A"
                 style="@style/search_text"
-                android:hint="A country, a city, a place... or anything " />
+                android:hint="@string/a_country_a_city_a_place_or_anything"
+                android:inputType="text"
+                android:textColorHint="#52577A" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -83,7 +84,7 @@
             android:id="@+id/toppick_need_h2"
             style="@style/recyclerview_text"
             android:layout_marginTop="@dimen/_10sdp"
-            android:text="TOP-PICK ARTICLES"
+            android:text="@string/top_pick_articles"
             app:layout_constraintStart_toStartOf="@id/guide_fragment_h1"
             app:layout_constraintTop_toBottomOf="@+id/button_recycler" />
 
