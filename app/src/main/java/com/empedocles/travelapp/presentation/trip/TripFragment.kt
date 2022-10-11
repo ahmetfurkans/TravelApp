@@ -11,7 +11,6 @@ import com.empedocles.travelapp.data.local.TripEntity
 import com.empedocles.travelapp.databinding.FragmentTripBinding
 import com.empedocles.travelapp.domain.model.TravelModel
 import com.empedocles.travelapp.presentation.home.ButtonModel
-import com.empedocles.travelapp.util.toDateString
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,13 +47,10 @@ class TripFragment : Fragment() {
             ButtonModel(R.drawable.ic_trip, "Trips"),
             ButtonModel(R.drawable.ic_bookmark, "Bookmark")
         )
-
         val viewpager = binding.viewPager
         val tabLayout = binding.tabLayout
-
         viewpager.adapter = adapter
         viewpager.isUserInputEnabled = false
-
         TabLayoutMediator(tabLayout, viewpager) { tab, position ->
             tab.text = "${tabItems.get(position).text}"
             tab.setIcon(tabItems[position].id)
@@ -62,21 +58,17 @@ class TripFragment : Fragment() {
     }
 
     private fun observeLiveData() {
+        observeApi()
+        observeTripRoomLiveData()
+    }
+
+    private fun observeApi() {
         viewModel.loadAllTravelItem().observe(viewLifecycleOwner) {
             bookMarkList.clear()
-            bookMarkList.addAll(it.filter { item -> item.isBookmark == true })
+            bookMarkList.addAll(it.filter { item -> item.isBookmark })
             val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
             binding.viewPager.adapter = newAdapter
-            if (tripList.isNotEmpty()) {
-                val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
-                binding.viewPager.adapter = newAdapter
-            }
-            if (bookMarkList.isNotEmpty()) {
-                println("bookmark list + observer")
-                println(bookMarkList[1].city)
-            }
         }
-        observeTripRoomLiveData()
     }
 
     private fun observeTripRoomLiveData() {

@@ -6,7 +6,6 @@ import androidx.room.Query
 
 @Dao
 interface TripDao {
-
     @Query("SELECT * FROM tripentity")
     suspend fun getAll(): List<TripEntity>
 

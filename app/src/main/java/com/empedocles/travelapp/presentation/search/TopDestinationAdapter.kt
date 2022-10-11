@@ -26,7 +26,7 @@ class TopDestinationAdapter(private val travelList: ArrayList<TravelModel>) :
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-        holder.bind(travelList.get(position))
+        holder.bind(travelList[position])
     }
 
     override fun getItemCount(): Int {
@@ -43,7 +43,7 @@ class TopDestinationAdapter(private val travelList: ArrayList<TravelModel>) :
             binding.root.context as? LifecycleOwner
             binding.travelModel = travelModel
             binding.imageView.downloadFromUrl(
-                travelModel.images.get(0).url, circularProgressFactory(binding.root.context)
+                travelModel.images[0].url, circularProgressFactory(binding.root.context)
             )
         }
     }

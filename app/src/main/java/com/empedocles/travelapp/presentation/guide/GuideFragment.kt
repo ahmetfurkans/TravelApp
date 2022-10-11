@@ -34,20 +34,22 @@ class GuideFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         observeLiveData()
     }
-
 
     private fun createUi() {
         createMightRecycler()
         createTopPickRecycler()
         createButtonRecycler()
         binding.guideFragmentSearch.setEndIconOnClickListener {
-            val query = binding.searchText.text.toString()
-            val bundle = bundleOf("query" to query)
-            it.findNavController().navigate(R.id.action_global_searchResultFragment, bundle)
+            createOnClickFunctions(it)
         }
+    }
+
+    private fun createOnClickFunctions(view: View) {
+        val query = binding.searchText.text.toString()
+        val bundle = bundleOf("query" to query)
+        view.findNavController().navigate(R.id.action_global_searchResultFragment, bundle)
     }
 
     private fun createMightRecycler() {
@@ -62,8 +64,9 @@ class GuideFragment : Fragment() {
         binding.toppickRecycler.adapter = topPickRecyclerAdapter
     }
 
-    private fun createButtonRecycler(){
-        binding.buttonRecycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    private fun createButtonRecycler() {
+        binding.buttonRecycler.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.buttonRecycler.adapter = GuideButtonRecyclerAdapter()
     }
 

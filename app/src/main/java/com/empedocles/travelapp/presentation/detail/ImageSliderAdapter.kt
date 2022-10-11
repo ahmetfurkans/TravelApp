@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.bumptech.glide.Glide
 import com.empedocles.travelapp.R
+import com.empedocles.travelapp.util.circularProgressFactory
+import com.empedocles.travelapp.util.downloadFromUrl
 
 class ImageSlideAdapter(private val context: Context, private var imageList: ArrayList<String>) :
     PagerAdapter() {
@@ -29,11 +30,8 @@ class ImageSlideAdapter(private val context: Context, private var imageList: Arr
         val ivImages = view.findViewById<ImageView>(R.id.detail_fragment_banner)
 
         imageList[position].let {
-            Glide.with(context)
-                .load(it)
-                .into(ivImages);
+            ivImages.downloadFromUrl(it, circularProgressFactory(view.context))
         }
-
 
         val vp = container as ViewPager
         vp.addView(view, 0)

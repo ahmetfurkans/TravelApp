@@ -7,18 +7,14 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.core.os.bundleOf
-import androidx.core.view.get
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.empedocles.travelapp.R
 import com.empedocles.travelapp.data.local.TripEntity
 import com.empedocles.travelapp.databinding.FragmentAddTripBinding
 import com.empedocles.travelapp.domain.model.TravelModel
-import com.empedocles.travelapp.util.toDateString
 import dagger.hilt.android.AndroidEntryPoint
-import kotlin.math.absoluteValue
 
 @AndroidEntryPoint
 class AddTripFragment : DialogFragment() {
@@ -33,7 +29,6 @@ class AddTripFragment : DialogFragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentAddTripBinding.inflate(inflater)
-
         return binding.root
     }
 
@@ -48,37 +43,41 @@ class AddTripFragment : DialogFragment() {
             this.dismiss()
         }
         binding.addButton.setOnClickListener {
-            var selectedTravelModel: TravelModel? = null
-            viewModel.loadAllTravelItem().value?.let {
-                selectedTravelModel =
-                    it.firstOrNull { travelModel -> travelModel.city == binding.autoTextView.text.toString() }
-            }
-            if (selectedTravelModel == null) {
-                Toast.makeText(
-                    requireContext(),
-                    "We couldn't find city in our database",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
-                selectedTravelModel?.let {
-                    viewModel.addTrip(
-                        TripEntity(
-                            selectedTravelModel!!.id,
-                            selectedTravelModel!!.city,
-                            selectedTravelModel!!.images.count(),
-                            selectedTravelModel!!.images[0].url,
-                            binding.startDate.drawingTime,
-                            binding.endDate.drawingTime
-                        )
-                    )
-                    val bundle = bundleOf("id" to selectedTravelModel!!.id)
-                    findNavController().navigate(R.id.action_global_detailFragment, bundle)
-                }
-            }
-            Toast.makeText(requireContext(), "Trip added to database", Toast.LENGTH_SHORT)
-                .show()
-            this.dismiss()
+            addRoomDataBase()
         }
+    }
+
+    private fun addRoomDataBase() {
+        var selectedTravelModel: TravelModel? = null
+        viewModel.loadAllTravelItem().value?.let {
+            selectedTravelModel =
+                it.firstOrNull { travelModel -> travelModel.city == binding.autoTextView.text.toString() }
+        }
+        if (selectedTravelModel == null) {
+            Toast.makeText(
+                requireContext(),
+                "We couldn't find city in our database",
+                Toast.LENGTH_SHORT
+            ).show()
+        } else {
+            selectedTravelModel?.let {
+                viewModel.addTrip(
+                    TripEntity(
+                        selectedTravelModel!!.id,
+                        selectedTravelModel!!.city,
+                        selectedTravelModel!!.images.count(),
+                        selectedTravelModel!!.images[0].url,
+                        binding.startDate.drawingTime,
+                        binding.endDate.drawingTime
+                    )
+                )
+                val bundle = bundleOf("id" to selectedTravelModel!!.id)
+                findNavController().navigate(R.id.action_global_detailFragment, bundle)
+            }
+        }
+        Toast.makeText(requireContext(), "Trip added to database", Toast.LENGTH_SHORT)
+            .show()
+        this.dismiss()
     }
 
     private fun observeLiveData() {
@@ -89,7 +88,6 @@ class AddTripFragment : DialogFragment() {
                 android.R.layout.simple_list_item_1, cityNameList
             )
             binding.autoTextView.setAdapter(adapter)
-
         }
     }
 

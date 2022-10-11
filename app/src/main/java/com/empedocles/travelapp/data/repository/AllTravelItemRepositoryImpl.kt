@@ -7,6 +7,7 @@ import com.empedocles.travelapp.util.Resource
 
 class AllTravelItemRepositoryImpl(private val apiService: TravelApiService) :
     AllTravelItemRepository, BaseRepositoryImpl() {
+
     override suspend fun getAllTravelItem(): Resource<List<TravelModel>> {
         return safeApiCall { apiService.getAllTravelList() }
     }

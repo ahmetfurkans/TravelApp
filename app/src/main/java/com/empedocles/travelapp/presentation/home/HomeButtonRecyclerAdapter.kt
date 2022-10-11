@@ -3,13 +3,12 @@ package com.empedocles.travelapp.presentation.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.empedocles.travelapp.R
 import com.empedocles.travelapp.databinding.FragmentHomeButtonRecyclerItemBinding
 
-class HomeButtonRecyclerAdapter() :
+class HomeButtonRecyclerAdapter :
     RecyclerView.Adapter<HomeButtonRecyclerAdapter.ItemHolder>() {
 
-    val buttonList = listOf<ButtonModel>(
+    val buttonList = listOf(
         HomeButtonConstants.FLIGHTS,
         HomeButtonConstants.HOTELS,
         HomeButtonConstants.CARS,
@@ -18,7 +17,7 @@ class HomeButtonRecyclerAdapter() :
         class ItemHolder(private val binding : FragmentHomeButtonRecyclerItemBinding) : RecyclerView.ViewHolder(binding.root) {
                 fun bind(buttonModel: ButtonModel) {
                     binding.buttonImage.setImageResource(buttonModel.id)
-                    binding.buttonText.setText(buttonModel.text)
+                    binding.buttonText.text = buttonModel.text
                 }
         }
 

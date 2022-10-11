@@ -8,6 +8,7 @@ import retrofit2.Response
 import java.io.IOException
 
 abstract class BaseRepositoryImpl {
+
     // Function used in all Repos to handle api errors
     suspend fun <T> safeApiCall(apiToBeCalled: suspend () -> Response<T>): Resource<T> {
         val customErrorMessage = "Something went wrong"

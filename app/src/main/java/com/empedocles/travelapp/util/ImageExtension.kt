@@ -6,7 +6,7 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 
 // Helper function to download image
-fun ImageView.downloadFromUrl(url :String, circularProgressDrawable: CircularProgressDrawable){
+fun ImageView.downloadFromUrl(url: String, circularProgressDrawable: CircularProgressDrawable) {
     Glide.with(context)
         .load(url)
         .placeholder(circularProgressDrawable)
@@ -14,7 +14,7 @@ fun ImageView.downloadFromUrl(url :String, circularProgressDrawable: CircularPro
 }
 
 // Function to create progress bar
-fun circularProgressFactory(context: Context): CircularProgressDrawable{
+fun circularProgressFactory(context: Context): CircularProgressDrawable {
     val circularProgressDrawable = CircularProgressDrawable(context)
     circularProgressDrawable.strokeWidth = 5f
     circularProgressDrawable.centerRadius = 30f

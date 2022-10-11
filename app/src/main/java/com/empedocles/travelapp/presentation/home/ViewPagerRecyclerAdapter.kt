@@ -19,7 +19,8 @@ class ViewPagerRecyclerAdapter(private val travelList: List<TravelModel>)
                 val bundle = bundleOf("id" to travelModel.id)
                 it.findNavController().navigate(R.id.action_global_detailFragment, bundle)
             }
-            binding.imageView.downloadFromUrl(travelModel.images.get(0).url, circularProgressFactory(binding.root.context)
+            binding.imageView.downloadFromUrl(
+                travelModel.images[0].url, circularProgressFactory(binding.root.context)
             )
         }
     }
@@ -30,7 +31,7 @@ class ViewPagerRecyclerAdapter(private val travelList: List<TravelModel>)
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-        holder.bind(travelList.get(position))
+        holder.bind(travelList[position])
     }
 
     override fun getItemCount(): Int {

@@ -17,7 +17,7 @@ class SearchResultFragment : Fragment() {
     private val viewModel by viewModels<SearchResultViewModel>()
     private lateinit var query: String
     private var adapter = NearbyAdapter(arrayListOf())
-    private lateinit var binding : FragmentSearchResultBinding
+    private lateinit var binding: FragmentSearchResultBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,10 +38,10 @@ class SearchResultFragment : Fragment() {
         observeLiveData()
     }
 
-    private fun createUi(){
+    private fun createUi() {
         binding.searchQuery.text = query
         createNearbyRecycler()
-        binding.backIcon.setOnClickListener{
+        binding.backIcon.setOnClickListener {
             findNavController().navigateUp()
         }
     }
@@ -63,10 +63,10 @@ class SearchResultFragment : Fragment() {
                     println("Error")
                 } else {
                     binding.feedProgressBar.visibility = View.GONE
-                    if (state.searchResults.isEmpty() && !state.isLoading){
+                    if (state.searchResults.isEmpty() && !state.isLoading) {
                         binding.noResult.visibility = View.VISIBLE
                         binding.searchResultRecycler.visibility = View.GONE
-                    }else{
+                    } else {
                         binding.noResult.visibility = View.GONE
                         binding.searchResultRecycler.visibility = View.VISIBLE
                         adapter.updateList(state.searchResults)

@@ -7,7 +7,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.empedocles.travelapp.R
-import com.empedocles.travelapp.databinding.FragmentGuideMightrecyclerItemBinding
 import com.empedocles.travelapp.databinding.FragmentGuideTopPickRecyclerItemBinding
 import com.empedocles.travelapp.domain.model.TravelModel
 import com.empedocles.travelapp.util.circularProgressFactory
@@ -26,7 +25,7 @@ class TopPickRecyclerAdapter(private val travelList: ArrayList<TravelModel>) :
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-        holder.bind(travelList.get(position))
+        holder.bind(travelList[position])
     }
 
     override fun getItemCount(): Int {
@@ -35,18 +34,21 @@ class TopPickRecyclerAdapter(private val travelList: ArrayList<TravelModel>) :
 
     class ItemHolder(private val binding: FragmentGuideTopPickRecyclerItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(travelModel: TravelModel) {
-            binding.topImage.setOnClickListener {
-                val bundle = bundleOf("id" to travelModel.id)
-                it.findNavController().navigate(R.id.action_global_detailFragment, bundle)
+        fun bind(selectedTravelModel: TravelModel) {
+            binding.apply {
+                topImage.setOnClickListener {
+                    val bundle = bundleOf("id" to selectedTravelModel.id)
+                    it.findNavController().navigate(R.id.action_global_detailFragment, bundle)
+                }
+                val bookMarkDrawable =
+                    if (selectedTravelModel.isBookmark) R.drawable.ic_bookmark_selected else R.drawable.ic_bookmark
+                bookmarkButton.setImageResource(bookMarkDrawable)
+                root.context as? LifecycleOwner
+                travelModel = selectedTravelModel
+                topImage.downloadFromUrl(
+                    selectedTravelModel.images[1].url, circularProgressFactory(root.context)
+                )
             }
-            val bookMarkDrawable = if (travelModel.isBookmark) R.drawable.ic_bookmark_selected else R.drawable.ic_bookmark
-            binding.bookmarkButton.setImageResource(bookMarkDrawable)
-            binding.root.context as? LifecycleOwner
-            binding.travelModel = travelModel
-            binding.topImage.downloadFromUrl(
-                travelModel.images.get(1).url, circularProgressFactory(binding.root.context)
-            )
         }
     }
 

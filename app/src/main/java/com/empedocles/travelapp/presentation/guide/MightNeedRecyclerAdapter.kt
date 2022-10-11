@@ -35,14 +35,14 @@ class MightNeedRecyclerAdapter (private val travelList: ArrayList<TravelModel>) 
     class ItemHolder(private val binding: FragmentGuideMightrecyclerItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(travelModel: TravelModel) {
+            binding.root.context as? LifecycleOwner
             binding.imageView.setOnClickListener {
                 val bundle = bundleOf("id" to travelModel.id)
                 it.findNavController().navigate(R.id.action_global_detailFragment, bundle)
             }
-            binding.root.context as? LifecycleOwner
             binding.travelModel = travelModel
             binding.imageView.downloadFromUrl(
-                travelModel.images.get(0).url, circularProgressFactory(binding.root.context)
+                travelModel.images[0].url, circularProgressFactory(binding.root.context)
             )
         }
     }

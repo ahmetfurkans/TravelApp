@@ -39,10 +39,14 @@ class SearchFragment : Fragment() {
         createTopDestinationRecycler()
         createNearbyRecycler()
         binding.searchFragmentSearch.setEndIconOnClickListener() {
-            val query = binding.searchField.text.toString()
-            val bundle = bundleOf("query" to query)
-            it.findNavController().navigate(R.id.action_global_searchResultFragment, bundle)
+            searchFunction(it)
         }
+    }
+
+    private fun searchFunction(view : View){
+        val query = binding.searchField.text.toString()
+        val bundle = bundleOf("query" to query)
+        view.findNavController().navigate(R.id.action_global_searchResultFragment, bundle)
     }
 
     private fun createTopDestinationRecycler() {
@@ -67,6 +71,5 @@ class SearchFragment : Fragment() {
             nearbyAdapter.updateList(nearby)
         }
     }
-
 
 }

@@ -13,13 +13,9 @@ import javax.inject.Inject
 class AllTravelItemUseCase @Inject constructor(
     private val repository: AllTravelItemRepository
 ) {
+
     private var _allTravelList = MutableLiveData<List<TravelModel>>()
     val allTravelList: LiveData<List<TravelModel>> = _allTravelList
-
-    suspend operator fun invoke(
-    ): Resource<List<TravelModel>> {
-        return repository.getAllTravelItem()
-    }
 
     fun getAllTravelItem(
     ) {
@@ -33,7 +29,8 @@ class AllTravelItemUseCase @Inject constructor(
                 }
                 is Resource.Success -> {
                     result.data?.let { list ->
-                        _allTravelList.postValue(list)                     }
+                        _allTravelList.postValue(list)
+                    }
                 }
             }
         }

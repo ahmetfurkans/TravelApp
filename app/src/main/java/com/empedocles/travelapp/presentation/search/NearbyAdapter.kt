@@ -25,7 +25,7 @@ class NearbyAdapter (private val travelList: ArrayList<TravelModel>) :
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-        holder.bind(travelList.get(position))
+        holder.bind(travelList[position])
     }
 
     override fun getItemCount(): Int {
@@ -41,7 +41,6 @@ class NearbyAdapter (private val travelList: ArrayList<TravelModel>) :
                 val bundle = bundleOf("id" to travelModel.id)
                 it.findNavController().navigate(R.id.action_global_detailFragment, bundle)
             }
-
             binding.root.context as? LifecycleOwner
             binding.travelModel = travelModel
             binding.imageView.downloadFromUrl(

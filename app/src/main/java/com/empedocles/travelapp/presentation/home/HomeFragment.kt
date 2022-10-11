@@ -32,7 +32,6 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupUi()
         observeLiveData()
     }
@@ -57,10 +56,8 @@ class HomeFragment : Fragment() {
         val tabTexts = arrayListOf<String>("All", "Hotels", "Flights", "Transportations")
         var viewPager = binding.viewPager
         val tabLayout = binding.tabLayout
-
         viewPager.isUserInputEnabled = false
         viewPager.adapter = adapter
-
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = "${tabTexts[position]}"
         }.attach()

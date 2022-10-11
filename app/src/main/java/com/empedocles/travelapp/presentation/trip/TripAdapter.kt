@@ -12,8 +12,6 @@ import com.empedocles.travelapp.databinding.FragmentTripTripRecyclerItemBinding
 import com.empedocles.travelapp.util.circularProgressFactory
 import com.empedocles.travelapp.util.downloadFromUrl
 import com.empedocles.travelapp.util.toDateString
-import java.util.*
-import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
 
 class TripAdapter(private val travelList: ArrayList<TripEntity>) :

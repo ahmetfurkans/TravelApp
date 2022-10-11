@@ -9,6 +9,7 @@ import javax.inject.Inject
 class SingleTravelItemUseCase @Inject constructor(
     private val repository: SingleTravelItemRepository
 ) {
+
     suspend operator fun invoke(
         id: String
     ): Resource<TravelModel> {

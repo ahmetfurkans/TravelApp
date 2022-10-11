@@ -35,7 +35,7 @@ class DetailViewModel @Inject constructor(
                     }
                 }
                 else -> {
-                    println(result.message)
+                    _pageState.value?.isError = true
                 }
             }
         }

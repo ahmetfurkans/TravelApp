@@ -10,7 +10,7 @@ import com.empedocles.travelapp.presentation.home.ButtonModel
 class GuideButtonRecyclerAdapter :
     RecyclerView.Adapter<GuideButtonRecyclerAdapter.ItemHolder>() {
 
-    val buttonList = listOf<ButtonModel>(
+    val buttonList = listOf(
         GuideButtonConstants.SIGHTSEEING,
         GuideButtonConstants.RESORT,
         GuideButtonConstants.RESTAURANT,
@@ -22,7 +22,7 @@ class GuideButtonRecyclerAdapter :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(buttonModel: ButtonModel) {
             binding.buttonImage.setImageResource(buttonModel.id)
-            binding.buttonText.setText(buttonModel.text)
+            binding.buttonText.text = buttonModel.text
         }
     }
 

@@ -53,7 +53,6 @@ class ViewPagerAdapter(
                 }
 
                 1 -> {
-                    println("2")
                     val adapter = NearbyAdapter(bookMarkList)
                     binding.tripRecyclerView.layoutManager =
                         LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)

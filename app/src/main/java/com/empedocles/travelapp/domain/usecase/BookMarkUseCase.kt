@@ -9,6 +9,7 @@ class BookMarkUseCase @Inject constructor(
     private val repository: BookMarkRepository,
     private val allTravelItemUseCase: AllTravelItemUseCase
 ) {
+
     suspend fun changeBookMark(
         id: String,
         isBookmark: Boolean

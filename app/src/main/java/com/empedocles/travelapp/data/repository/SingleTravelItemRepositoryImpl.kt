@@ -8,6 +8,7 @@ import com.empedocles.travelapp.util.Resource
 class SingleTravelItemRepositoryImpl(
     private val apiService: TravelApiService,
 ): SingleTravelItemRepository, BaseRepositoryImpl(){
+
     override suspend fun getSingleTravelItem(id : String): Resource<TravelModel> {
         return safeApiCall { apiService.getTravelItem(id)}
     }
