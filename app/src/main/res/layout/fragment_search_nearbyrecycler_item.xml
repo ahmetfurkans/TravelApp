@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="bookMarkHandler"
+            type="com.empedocles.travelapp.presentation.detail.DetailViewModel" />
 
         <variable
             name="travelModel"

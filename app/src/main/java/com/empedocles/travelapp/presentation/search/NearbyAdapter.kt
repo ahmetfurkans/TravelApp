@@ -1,8 +1,6 @@
 package com.empedocles.travelapp.presentation.search
 
 import android.view.LayoutInflater
-import android.view.ScrollCaptureCallback
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.lifecycle.LifecycleOwner
@@ -10,7 +8,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.empedocles.travelapp.R
 import com.empedocles.travelapp.databinding.FragmentSearchNearbyrecyclerItemBinding
-import com.empedocles.travelapp.databinding.FragmentSearchToprecyclerItemBinding
 import com.empedocles.travelapp.domain.model.TravelModel
 import com.empedocles.travelapp.util.circularProgressFactory
 import com.empedocles.travelapp.util.downloadFromUrl

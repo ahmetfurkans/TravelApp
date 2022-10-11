@@ -50,7 +50,6 @@
     <style name="search_input">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/_40sdp</item>
-        <item name="android:layout_marginHorizontal">@dimen/_11sdp</item>
         <item name="android:drawableEnd">@drawable/ic_search</item>
     </style>
 

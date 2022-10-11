@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.trip.AddTripFragment">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_260sdp"
+            android:layout_height="@dimen/_450sdp"
+            android:background="#FCFCFD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/autoText_label"
+            style="@style/recyclerview_text"
+            android:textSize="@dimen/_10sdp"
+            android:text="City name"
+            app:layout_constraintStart_toStartOf="@+id/autoTextView"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoTextView"
+            android:layout_width="257dp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:hint="Please type city name"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/autoText_label" />
+
+        <TextView
+            android:id="@+id/startDate_label"
+            style="@style/recyclerview_text"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Start Date"
+            app:layout_constraintStart_toStartOf="@+id/autoTextView"
+            app:layout_constraintTop_toBottomOf="@+id/autoTextView" />
+
+        <DatePicker
+            android:id="@+id/startDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_120sdp"
+            android:calendarViewShown="false"
+            android:startYear="2022"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:datePickerMode="spinner"
+            app:layout_constraintStart_toStartOf="@+id/startDate_label"
+            app:layout_constraintTop_toBottomOf="@+id/startDate_label" />
+
+        <TextView
+            android:id="@+id/endDate_label"
+            style="@style/recyclerview_text"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="End Date"
+            app:layout_constraintStart_toStartOf="@+id/autoTextView"
+            app:layout_constraintTop_toBottomOf="@+id/startDate" />
+
+        <DatePicker
+            android:id="@+id/endDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_120sdp"
+            android:calendarViewShown="false"
+            android:startYear="2022"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:datePickerMode="spinner"
+            app:layout_constraintStart_toStartOf="@+id/startDate_label"
+            app:layout_constraintTop_toBottomOf="@+id/endDate_label" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/_80sdp"
+            android:id="@+id/addButton"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Add Trip"
+            android:textColor="@color/customWhite"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:background="@drawable/fragment_add_trip_button_bg"
+            app:layout_constraintStart_toStartOf="@+id/endDate"
+            app:layout_constraintTop_toBottomOf="@+id/endDate" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:id="@+id/cancel_button"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/fragment_search_result_back_bg"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:text="Cancel"
+            android:textColor="@color/customSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/endDate"
+            app:layout_constraintTop_toBottomOf="@+id/endDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

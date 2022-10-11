@@ -8,9 +8,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.empedocles.travelapp.R
 import com.empedocles.travelapp.databinding.FragmentGuideMightrecyclerItemBinding
-import com.empedocles.travelapp.databinding.FragmentSearchNearbyrecyclerItemBinding
 import com.empedocles.travelapp.domain.model.TravelModel
-import com.empedocles.travelapp.presentation.search.NearbyAdapter
 import com.empedocles.travelapp.util.circularProgressFactory
 import com.empedocles.travelapp.util.downloadFromUrl
 

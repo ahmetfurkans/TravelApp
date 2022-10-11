@@ -10,6 +10,7 @@ import java.io.IOException
 abstract class BaseRepositoryImpl {
     // Function used in all Repos to handle api errors
     suspend fun <T> safeApiCall(apiToBeCalled: suspend () -> Response<T>): Resource<T> {
+        val customErrorMessage = "Something went wrong"
 
         // Returning api response
         return withContext(Dispatchers.IO) {
@@ -18,15 +19,15 @@ abstract class BaseRepositoryImpl {
                 if (response.isSuccessful) {
                     Resource.Success(data = response.body())
                 } else {
-                    Resource.Error("Something went wrong")
+                    Resource.Error(customErrorMessage)
                 }
 
             } catch (e: HttpException) {
-                Resource.Error(e.message ?: "Something went wrong")
+                Resource.Error(e.message ?: customErrorMessage)
             } catch (e: IOException) {
                 Resource.Error("Please check your network connection")
             } catch (e: Exception) {
-                Resource.Error(errorMessage = "Something went wrong")
+                Resource.Error(errorMessage = customErrorMessage)
             }
         }
     }

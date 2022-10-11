@@ -2,7 +2,6 @@ package com.empedocles.travelapp.domain.usecase
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
 import com.empedocles.travelapp.domain.model.TravelModel
 import com.empedocles.travelapp.domain.repository.AllTravelItemRepository
 import com.empedocles.travelapp.util.Resource

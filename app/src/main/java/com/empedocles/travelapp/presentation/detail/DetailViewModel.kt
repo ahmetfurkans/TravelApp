@@ -8,16 +8,8 @@ import com.empedocles.travelapp.domain.usecase.AllTravelItemUseCase
 import com.empedocles.travelapp.domain.usecase.BookMarkUseCase
 import com.empedocles.travelapp.domain.usecase.SingleTravelItemUseCase
 import com.empedocles.travelapp.util.Resource
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import okhttp3.MediaType
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.Part
 import javax.inject.Inject
 
 
@@ -32,6 +24,7 @@ class DetailViewModel @Inject constructor(
     val pageState: LiveData<DetailState> = _pageState
 
     fun bookMarkHandler(id: String, isBookmark: Boolean) {
+        println("Girdim")
         viewModelScope.launch {
             when (val result = bookMarkUseCase.changeBookMark(
                 id, isBookmark

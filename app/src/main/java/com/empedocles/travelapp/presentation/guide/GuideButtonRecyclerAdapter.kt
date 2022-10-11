@@ -4,10 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.empedocles.travelapp.databinding.FragmentGuideButtonRecyclerItemBinding
-import com.empedocles.travelapp.databinding.FragmentHomeButtonRecyclerItemBinding
 import com.empedocles.travelapp.presentation.home.ButtonModel
-import com.empedocles.travelapp.presentation.home.HomeButtonConstants
-import com.empedocles.travelapp.presentation.home.HomeButtonRecyclerAdapter
+
 
 class GuideButtonRecyclerAdapter :
     RecyclerView.Adapter<GuideButtonRecyclerAdapter.ItemHolder>() {

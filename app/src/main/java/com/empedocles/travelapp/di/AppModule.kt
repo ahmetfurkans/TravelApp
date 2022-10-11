@@ -2,7 +2,7 @@ package com.empedocles.travelapp.di
 
 import android.app.Application
 import androidx.room.Room
-import com.empedocles.travelapp.data.local.BookMarkDataBase
+import com.empedocles.travelapp.data.local.TripDatabase
 import com.empedocles.travelapp.data.remote.TravelApiService
 import com.empedocles.travelapp.data.repository.AllTravelItemRepositoryImpl
 import com.empedocles.travelapp.data.repository.BookMarkRepositoryImpl
@@ -17,7 +17,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -34,11 +33,11 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideBookMarkDatabase(app: Application): BookMarkDataBase {
+    fun provideTripDatabase(app: Application): TripDatabase {
         return Room.databaseBuilder(
             app,
-            BookMarkDataBase::class.java,
-            "bookmark.db"
+            TripDatabase::class.java,
+            "trip.db"
         ).build()
     }
 

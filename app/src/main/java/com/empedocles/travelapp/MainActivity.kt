@@ -3,17 +3,10 @@ package com.empedocles.travelapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.empedocles.travelapp.databinding.ActivityMainBinding
-import com.empedocles.travelapp.presentation.detail.DetailViewModel
-import com.empedocles.travelapp.presentation.guide.GuideViewModel
-import com.empedocles.travelapp.presentation.home.HomeViewModel
-import com.empedocles.travelapp.presentation.search.SearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

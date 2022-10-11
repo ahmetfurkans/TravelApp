@@ -1,18 +1,13 @@
 package com.empedocles.travelapp.presentation.home
 
-
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
-import androidx.navigation.NavDirections
-import androidx.navigation.Navigation
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.empedocles.travelapp.R
 import com.empedocles.travelapp.databinding.FragmentHomeTabLayoutRecyclerItemBinding
 import com.empedocles.travelapp.domain.model.TravelModel
-import com.empedocles.travelapp.presentation.detail.DetailFragment
 import com.empedocles.travelapp.util.circularProgressFactory
 import com.empedocles.travelapp.util.downloadFromUrl
 

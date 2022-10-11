@@ -1,13 +1,13 @@
 package com.empedocles.travelapp.presentation.trip
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.empedocles.travelapp.R
+import com.empedocles.travelapp.data.local.TripEntity
 import com.empedocles.travelapp.databinding.FragmentTripBinding
 import com.empedocles.travelapp.domain.model.TravelModel
 import com.empedocles.travelapp.presentation.home.ButtonModel
@@ -19,6 +19,8 @@ class TripFragment : Fragment() {
     private lateinit var binding: FragmentTripBinding
     private val emptyList = ArrayList<List<TravelModel>>()
     private val viewModel by viewModels<TripViewModel>()
+    private var tripList = listOf<TripEntity>()
+    private var bookMarkList = listOf<TravelModel>()
 
     private val adapter = ViewPagerAdapter(emptyList)
 
@@ -33,6 +35,10 @@ class TripFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.addTripButton.setOnClickListener {
+            val dialogFragment = AddTripFragment()
+            dialogFragment.show(parentFragmentManager, "MyFragment")
+        }
         createViewPager()
         observeLiveData()
     }
@@ -65,6 +71,12 @@ class TripFragment : Fragment() {
                     bookmark
                 )
             )
+        }
+    }
+
+    private fun observeTripRoomLiveData(){
+        viewModel.loadAllTravelItemFromRoom().observe(viewLifecycleOwner){
+            tripList = it
         }
     }
 }

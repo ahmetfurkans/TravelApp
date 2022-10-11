@@ -4,10 +4,10 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 
 @Database(
-    entities = [BookMarkIdEntity::class],
+    entities = [TripEntity::class],
     version = 1,
     exportSchema = false
 )
-abstract class BookMarkDataBase : RoomDatabase(){
-    abstract val dao : BookMarkDao
+abstract class TripDatabase : RoomDatabase() {
+    abstract val dao: TripDao
 }

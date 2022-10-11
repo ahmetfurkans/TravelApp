@@ -1,26 +1,17 @@
 package com.empedocles.travelapp.presentation.detail
 
-import android.graphics.RenderEffect
-import android.graphics.Shader
-import android.os.Build
+
 import android.os.Bundle
-import android.util.JsonWriter
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
-import com.empedocles.travelapp.R
 import com.empedocles.travelapp.databinding.FragmentDetailBinding
-import com.empedocles.travelapp.databinding.FragmentHomeBinding
-import com.empedocles.travelapp.presentation.home.HomeViewModel
 import com.empedocles.travelapp.util.circularProgressFactory
 import com.empedocles.travelapp.util.downloadFromUrl
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.qualifiers.ActivityContext
 
 @AndroidEntryPoint
 class DetailFragment : Fragment() {
@@ -32,8 +23,6 @@ class DetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-
         arguments?.getString("id")?.let { id ->
             selectedId = id
             viewModel.loadSelectedItem(id)
