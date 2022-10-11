@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
+import androidx.navigation.fragment.findNavController
 import com.empedocles.travelapp.databinding.FragmentDetailBinding
 import com.empedocles.travelapp.util.circularProgressFactory
 import com.empedocles.travelapp.util.downloadFromUrl
@@ -47,6 +48,9 @@ class DetailFragment : Fragment() {
                 binding.addBookMark.text =
                     if (item.isBookmark) "Remove Bookmark" else "Add Bookmark"
             }
+        }
+        binding.backIcon.setOnClickListener{
+            findNavController().navigateUp()
         }
     }
 

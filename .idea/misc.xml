@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable-v24/back_icon_gray.xml" value="0.2215" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable-v24/fragment_detail_ic_back.xml" value="0.2215" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/bottom_navigation_background_shape.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.189" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/bottom_navigation_guide_selector.xml" value="0.1" />
@@ -11,6 +13,7 @@
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/bottom_navigation_search_selector.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/bottom_navigation_trip_selector.xml" value="0.2365" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/fragment_add_trip_button_bg.xml" value="0.3535" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/fragment_detail_back_icon.xml" value="0.2215" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/fragment_detail_like_button_radius.xml" value="0.23" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/fragment_home_custom_tablayout_text.xml" value="0.1395" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/fragment_search_nearby_item_category.xml" value="0.1575" />
@@ -30,9 +33,12 @@
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/ic_trip_selected.xml" value="0.2365" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/main_gradiant_background.xml" value="0.1575" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/drawable/shardow_circle_backgrounf.xml" value="0.1575" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/font/montserrat.xml" value="0.17922077922077922" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/font/source_sans_pro_bold.xml" value="0.3264069264069264" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/font/source_sans_pro_semibold.xml" value="0.3264069264069264" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_add_trip.xml" value="0.33" />
-        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_detail.xml" value="0.25" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_detail.xml" value="0.43673469387755104" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide.xml" value="0.33" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide_button_recycler_item.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide_mightrecycler_item.xml" value="0.75" />
@@ -43,14 +49,14 @@
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_home_tab_layout_item.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_home_tab_layout_recycler_item.xml" value="0.3625" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_home_trip_tab_layout_item.xml" value="0.30526315789473685" />
-        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search_nearbyrecycler_item.xml" value="0.33" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search_result.xml" value="0.25" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_search_toprecycler_item.xml" value="0.22507122507122507" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_trip.xml" value="0.25" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_trip_bottom_sheet.xml" value="0.30526315789473685" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_trip_tab_layout_item.xml" value="0.30526315789473685" />
-        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_trip_trip_recycler_item.xml" value="0.30526315789473685" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_trip_trip_recycler_item.xml" value="0.33" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/menu/bottom_navigation.xml" value="0.27685185185185185" />
       </map>
     </option>

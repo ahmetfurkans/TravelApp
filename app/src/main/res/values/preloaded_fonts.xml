@@ -2,7 +2,11 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/montserrat</item>
+        <item>@font/montserrat_alternates_light</item>
         <item>@font/montserrat_alternates_semibold</item>
+        <item>@font/montserrat_light</item>
+        <item>@font/montserrat_semibold</item>
+        <item>@font/open_sans_light</item>
         <item>@font/source_sans_pro</item>
         <item>@font/source_sans_pro_bold</item>
         <item>@font/source_sans_pro_semibold</item>

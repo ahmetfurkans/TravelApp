@@ -21,36 +21,31 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_fragment_search"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="@dimen/_36sdp"
             android:layout_marginHorizontal="@dimen/_11sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            app:boxStrokeColor="#E0E2EB"
-            app:boxStrokeWidth="1.8dp"
-            app:endIconMode="custom"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
             app:endIconDrawable="@drawable/ic_search"
+            app:endIconMode="custom"
             app:endIconTint="@color/customSecondary"
-            app:hintTextColor="@color/customBlackText"
-            app:circularflow_defaultRadius="@dimen/_3sdp"
+            app:hintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_fragment_h1">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/searchField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#00000000"
-                android:textSize="@dimen/_12ssp"
-                android:fontFamily="@font/source_sans_pro"
+                android:textColorHint="#52577A"
+                style="@style/search_text"
                 android:hint="Where next?" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/search_fragment_h2"
             style="@style/recyclerview_text"
-            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="TOP DESTINATIONS"
             app:layout_constraintStart_toStartOf="@+id/search_fragment_h1"
             app:layout_constraintTop_toBottomOf="@+id/search_fragment_search" />

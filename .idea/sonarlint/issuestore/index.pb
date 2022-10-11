@@ -29,8 +29,6 @@ v
 Fapp/src/main/java/com/empedocles/travelapp/domain/model/TravelModel.kt,1\8\18f89a33d06a6a79e2372a51d53ada46323cb6a3
 |
 Lapp/src/main/java/com/empedocles/travelapp/domain/usecase/BookMarkUseCase.kt,2\0\2090ff8325fb4c3054dca08569d1b275a8ecc07c
-É
-Sapp/src/main/java/com/empedocles/travelapp/domain/usecase/SearchAllTravelUseCase.kt,d\5\d54982fd8d1ed71fa4c2cb62b2cc47e31b9bb946
 Ñ
 Tapp/src/main/java/com/empedocles/travelapp/domain/usecase/SingleTravelItemUseCase.kt,1\2\12d8e764140df2c751baf0acfd03e8265a5d4fc6
 Ä
@@ -43,8 +41,6 @@ Wapp/src/main/java/com/empedocles/travelapp/domain/repository/AllTravelItemRepos
 Zapp/src/main/java/com/empedocles/travelapp/domain/repository/SingleTravelItemRepository.kt,1\0\10305b7b590d3dff08b55670052fc41a77d00b48
 y
 Iapp/src/main/java/com/empedocles/travelapp/presentation/home/HomeState.kt,e\3\e33ac25dd1bf0427d1416733fea5e9374c3860a0
-|
-Lapp/src/main/java/com/empedocles/travelapp/presentation/home/HomeFragment.kt,f\2\f207a714842b196d193cecd66b16fc5677e5a2b8
 É
 Sapp/src/main/java/com/empedocles/travelapp/presentation/home/HomeButtonConstants.kt,5\4\5471a823fcca6940bc3e5604ab9d1df23ff136dc
 â
@@ -65,8 +61,6 @@ Yapp/src/main/java/com/empedocles/travelapp/presentation/guide/MightNeedRecycler
 Mapp/src/main/java/com/empedocles/travelapp/presentation/detail/DetailState.kt,c\4\c49cdc8d31dc154c7fe0acce6117cbdfd795f527
 }
 Mapp/src/main/java/com/empedocles/travelapp/presentation/search/SearchState.kt,d\0\d0e12d78a50d493b2089ea1afc72cf4149a9bb5b
-Ä
-Papp/src/main/java/com/empedocles/travelapp/presentation/search/SearchFragment.kt,6\f\6fdd13a2d363c230554b12d16588c6a263f0f0e6
 á
 Wapp/src/main/java/com/empedocles/travelapp/presentation/search/TopDestinationAdapter.kt,1\8\18d6318c03ab09eb48160686865e63a502f2759c
 ä
@@ -102,3 +96,19 @@ X
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+E
+app/lint-baseline.xml,1\f\1fc23505a3dfbb530e3d9c3d9063cabfef39c55f
+s
+Capp/src/main/java/com/empedocles/travelapp/data/local/TripEntity.kt,9\1\919dc0014e29e707e55708373ea0d9ce1f754377
+Å
+Qapp/src/main/java/com/empedocles/travelapp/presentation/search/SearchViewModel.kt,8\b\8bcaad6ddfdca1af8a2e216b17241c61de1a974b
+é
+^app/src/main/java/com/empedocles/travelapp/presentation/search_result/SearchResultViewModel.kt,c\2\c220b584d6aaa29e9255196b95edbccf035b7937
+y
+Iapp/src/main/java/com/empedocles/travelapp/presentation/trip/TripState.kt,3\c\3c4123a63533b1a63f30a9a7a8d5d372df8c4017
+}
+Mapp/src/main/java/com/empedocles/travelapp/presentation/home/HomeViewModel.kt,6\9\6933350e28fe5c88aacb032c1bc7b44442590c2b
+
+Oapp/src/main/java/com/empedocles/travelapp/presentation/guide/GuideViewModel.kt,2\6\262b346780f67bb6ea4738992908155397ae3178

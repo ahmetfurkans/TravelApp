@@ -2,8 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
+
         <variable
             name="tripEntity"
             type="com.empedocles.travelapp.data.local.TripEntity" />
@@ -11,13 +11,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_marginBottom="@dimen/_2sdp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_110sdp"
+            android:layout_height="@dimen/_145sdp"
             android:foreground="@drawable/main_gradiant_background"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
             android:layout_marginTop="@dimen/_35sdp"
             android:fontFamily="@font/source_sans_pro_bold"
             android:gravity="center"
-            android:text="{tripEntity.city}"
+            android:text="@{tripEntity.city}"
             android:textColor="#FCFCFD"
             android:textSize="@dimen/_14sdp"
             app:layout_constraintEnd_toEndOf="@id/imageView"
@@ -53,20 +53,53 @@
             app:layout_constraintStart_toStartOf="@id/imageView"
             app:layout_constraintTop_toBottomOf="@id/textView" />
 
+        <ImageView
+            android:id="@+id/images"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:src="@drawable/ic_bookmark"
+            app:layout_constraintBottom_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="@id/imageView" />
+
         <TextView
-            android:id="@+id/endDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="@dimen/_5sdp"
             android:fontFamily="@font/source_sans_pro"
-            android:gravity="center"
-            android:text="12323"
-            android:textColor="#FCFCFD"
-            android:textSize="@dimen/_12sdp"
+            android:text="4 items"
+            android:textColor="@color/customWhite"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/images"
+            app:layout_constraintStart_toEndOf="@+id/images"
+            app:layout_constraintTop_toTopOf="@+id/images" />
+
+        <ImageView
+            android:id="@+id/time"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintBottom_toBottomOf="@+id/images"
+            app:layout_constraintEnd_toStartOf="@id/daysLeft"
+            app:layout_constraintTop_toTopOf="@+id/images"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="284dp"
+            android:fontFamily="@font/source_sans_pro"
+            android:text="5 days left"
+            android:id="@+id/daysLeft"
+            android:textColor="@color/customWhite"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/images"
             app:layout_constraintEnd_toEndOf="@id/imageView"
-            app:layout_constraintHorizontal_bias="0.729"
-            app:layout_constraintStart_toStartOf="@id/imageView"
-            app:layout_constraintTop_toBottomOf="@id/textView" />
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintTop_toTopOf="@+id/images"
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

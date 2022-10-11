@@ -68,7 +68,6 @@ class TripFragment : Fragment() {
             val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
             binding.viewPager.adapter = newAdapter
             if (tripList.isNotEmpty()) {
-                tripList.forEach{ println(it.city)}
                 val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
                 binding.viewPager.adapter = newAdapter
             }
@@ -84,18 +83,8 @@ class TripFragment : Fragment() {
         viewModel.loadAllTravelItemFromRoom().observe(viewLifecycleOwner) {
             tripList.clear()
             tripList.addAll(it)
+            val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
+            binding.viewPager.adapter = newAdapter
         }
-        val newAdapter = ViewPagerAdapter(tripList, bookMarkList)
-        binding.viewPager.adapter = newAdapter
-
-        if (tripList.isNotEmpty()) {
-            println("trip list + observer")
-            println(tripList.get(1).city)
-        }
-        if (bookMarkList.isNotEmpty()) {
-            println("trip list + observer")
-            println(bookMarkList[1].city)
-        }
-
     }
 }

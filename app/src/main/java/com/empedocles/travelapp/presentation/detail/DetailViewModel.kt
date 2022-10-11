@@ -24,7 +24,6 @@ class DetailViewModel @Inject constructor(
     val pageState: LiveData<DetailState> = _pageState
 
     fun bookMarkHandler(id: String, isBookmark: Boolean) {
-        println("Girdim")
         viewModelScope.launch {
             when (val result = bookMarkUseCase.changeBookMark(
                 id, isBookmark

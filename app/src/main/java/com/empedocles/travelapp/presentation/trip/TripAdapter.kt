@@ -11,6 +11,10 @@ import com.empedocles.travelapp.data.local.TripEntity
 import com.empedocles.travelapp.databinding.FragmentTripTripRecyclerItemBinding
 import com.empedocles.travelapp.util.circularProgressFactory
 import com.empedocles.travelapp.util.downloadFromUrl
+import com.empedocles.travelapp.util.toDateString
+import java.util.*
+import java.util.concurrent.TimeUnit
+import kotlin.collections.ArrayList
 
 class TripAdapter(private val travelList: ArrayList<TripEntity>) :
     RecyclerView.Adapter<TripAdapter.ItemHolder>() {
@@ -41,6 +45,8 @@ class TripAdapter(private val travelList: ArrayList<TripEntity>) :
             }
             binding.root.context as? LifecycleOwner
             binding.tripEntity = tripEntity
+            binding.startDate.text =
+                "${tripEntity.startDate.toDateString()} - ${tripEntity.endDate.toDateString()}"
             binding.imageView.downloadFromUrl(
                 tripEntity.url, circularProgressFactory(binding.root.context)
             )

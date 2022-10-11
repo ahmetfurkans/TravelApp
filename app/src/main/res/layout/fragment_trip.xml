@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_70sdp"
+            android:layout_marginTop="@dimen/_82sdp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
                 android:layout_height="@dimen/_28sdp"
                 app:tabPaddingBottom="@dimen/_2sdp"
                 app:tabGravity="start"
-                app:tabIconTint="@color/customSecondary"
+                app:tabIconTint="@color/customPrimary"
                 app:tabInlineLabel="true"
                 app:tabIndicatorColor="@color/customSecondary"
                 app:tabIndicatorFullWidth="true"
@@ -48,14 +48,15 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/_13sdp" />
+                android:layout_marginTop="@dimen/_25sdp" />
 
         </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addTripButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            app:fabCustomSize="@dimen/_35sdp"
             android:layout_marginBottom="@dimen/_70sdp"
             android:src="@drawable/ic_plus"
             app:backgroundTint="@color/customSecondary"

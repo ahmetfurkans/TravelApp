@@ -38,7 +38,7 @@ class SearchFragment : Fragment() {
     private fun createUi() {
         createTopDestinationRecycler()
         createNearbyRecycler()
-        binding.searchFragmentSearch.setEndIconOnClickListener {
+        binding.searchFragmentSearch.setEndIconOnClickListener() {
             val query = binding.searchField.text.toString()
             val bundle = bundleOf("query" to query)
             it.findNavController().navigate(R.id.action_global_searchResultFragment, bundle)

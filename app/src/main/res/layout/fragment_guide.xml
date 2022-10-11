@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_13sdp"
             android:text="@string/see_all"
+            android:fontFamily="@font/source_sans_pro_bold"
             android:textColor="@color/customSecondary"
             android:textSize="@dimen/_10ssp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,26 +52,21 @@
             android:id="@+id/guide_fragment_search"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_36sdp"
             android:layout_marginHorizontal="@dimen/_11sdp"
-            android:layout_marginTop="@dimen/_2sdp"
-            app:circularflow_defaultRadius="@dimen/_3sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:endIconMode="custom"
+            android:layout_marginTop="@dimen/_6sdp"
             app:endIconDrawable="@drawable/ic_search"
+            app:endIconMode="custom"
             app:endIconTint="@color/customSecondary"
-            app:boxStrokeWidth="1.2dp"
-            app:boxStrokeColor="@color/customSecondary"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/might_need_recycler">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <EditText
                 android:id="@+id/searchText"
-                android:backgroundTint="#00000000"
-                android:textSize="@dimen/_12ssp"
-                android:fontFamily="@font/source_sans_pro"
+                android:textColorHint="#52577A"
+                style="@style/search_text"
                 android:hint="A country, a city, a place... or anything " />
         </com.google.android.material.textfield.TextInputLayout>
 

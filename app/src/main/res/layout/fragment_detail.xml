@@ -27,6 +27,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.detail" />
 
+        <ImageButton
+            android:id="@+id/backIcon"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/fragment_detail_back_icon"
+            android:src="@drawable/fragment_detail_ic_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/fragment_detail_h1"
             android:layout_width="@dimen/_240sdp"
@@ -65,7 +76,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/montserrat_light"
             android:text="@{travelModel.city}"
             android:textColor="#39414B"
             android:textSize="@dimen/_12sdp"
@@ -77,25 +88,27 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_150sdp"
             android:layout_marginHorizontal="@dimen/_14sdp"
+            android:fontFamily="@font/montserrat_light"
             android:text="@{travelModel.description}"
-            android:textSize="@dimen/_13sdp"
+            android:textColor="#39414B"
+            android:textSize="@dimen/_12sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fragment_detail_h2" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/addBookMark"
-            android:layout_width="@dimen/_240sdp"
+            android:layout_width="@dimen/_220sdp"
             android:layout_height="@dimen/_40ssp"
             android:layout_marginBottom="@dimen/_30sdp"
-            android:backgroundTint="@color/customSecondary"
-            android:fontFamily="@font/montserrat_alternates_semibold"
-            android:textAllCaps="false"
-            android:clickable="true"
-            android:text="Add Bookmark"
             android:background="@drawable/fragment_home_button"
+            android:backgroundTint="@color/customSecondary"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Add Bookmark"
+            android:textAllCaps="false"
             android:textColor="@color/customWhite"
-            android:textSize="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

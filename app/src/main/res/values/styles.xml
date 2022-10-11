@@ -58,4 +58,14 @@
         <item name="boxStrokeColor">#E0E2EB</item>
     </style>
 
+    <style name="search_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/_1sdp</item>
+        <item name="android:background">@drawable/search_text_background</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+    </style>
+
 </resources>
