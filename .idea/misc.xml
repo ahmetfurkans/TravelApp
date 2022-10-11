@@ -38,7 +38,8 @@
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/font/source_sans_pro_semibold.xml" value="0.3264069264069264" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_add_trip.xml" value="0.33" />
-        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_detail.xml" value="0.43673469387755104" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_detail.xml" value="0.22" />
+        <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_detail_image_slider_item.xml" value="0.30526315789473685" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide.xml" value="0.33" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide_button_recycler_item.xml" value="0.1" />
         <entry key="..\:/Users/Empedocles/Desktop/Proje/TravelApp/app/src/main/res/layout/fragment_guide_mightrecycler_item.xml" value="0.75" />

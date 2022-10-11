@@ -92,6 +92,9 @@ dependencies {
 
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
 
+    implementation 'me.relex:circleindicator:2.1.6'
+
+
 
 
 }

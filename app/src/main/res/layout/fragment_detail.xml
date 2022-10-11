@@ -15,17 +15,23 @@
         android:layout_height="match_parent"
         tools:context=".presentation.detail.DetailFragment">
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/detail_fragment_banner"
             android:layout_width="match_parent"
-            android:shadowColor="#802B3C4D"
             android:layout_height="@dimen/_300sdp"
-            android:contentDescription="@{travelModel.city}"
-            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.detail" />
+            />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="@id/detail_fragment_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="4dp"/>
 
         <ImageButton
             android:id="@+id/backIcon"
@@ -84,9 +90,10 @@
             app:layout_constraintTop_toBottomOf="@id/fragment_detail_h1" />
 
         <TextView
+            android:scrollbars="vertical"
             android:id="@+id/fragment_detail_h3"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_150sdp"
+            android:layout_height="@dimen/_110sdp"
             android:layout_marginHorizontal="@dimen/_14sdp"
             android:fontFamily="@font/montserrat_light"
             android:text="@{travelModel.description}"
@@ -100,7 +107,7 @@
             android:id="@+id/addBookMark"
             android:layout_width="@dimen/_220sdp"
             android:layout_height="@dimen/_40ssp"
-            android:layout_marginBottom="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
             android:background="@drawable/fragment_home_button"
             android:backgroundTint="@color/customSecondary"
             android:clickable="true"

@@ -77,8 +77,6 @@ m
 Lapp/src/androidTest/java/com/empedocles/travelapp/ExampleInstrumentedTest.kt,2\a\2a4e97183c6303e3234685d2de476715dfc039f5
 >
 app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
 X
@@ -90,8 +88,6 @@ X
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 ;
 gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 A
