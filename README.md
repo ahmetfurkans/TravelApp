@@ -29,4 +29,7 @@ HomeFragment        | SearchFragment | TripFragment |SearchResultFragment
 
 ## Video 🎥
 
+https://user-images.githubusercontent.com/78302281/195219536-fadbd4db-83af-4d8e-9f65-4554e0639477.mp4
+
+
 
